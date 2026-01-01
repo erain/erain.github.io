@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="犬," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,13 @@
 
 
 
-<meta name="description" content="定下了2018年的新年愿望为“多写博客”后，上一次更新还是一年以前…连hexo如何使用都已经忘了。幸好之前的设置代码都还保存在Bitbucket里面，花了一点时间才把才把博客在本地架起来。 这篇博客记录了这个hexo-based博客的workflow。 安装hexo，同步repo安装Hexo的方法很简单，首先要保证系统中安装了npm。然后： 1npm install hexo-cli -g 我用的">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客Workflow">
-<meta property="og:url" content="http://blog.yiyu.me/2018/01/28/blog-work-flow/index.html">
+<meta name="description" content="Skadoosh!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="不厌其烦">
+<meta property="og:url" content="http://blog.yiyu.me/page/2/index.html">
 <meta property="og:site_name" content="不厌其烦">
-<meta property="og:description" content="定下了2018年的新年愿望为“多写博客”后，上一次更新还是一年以前…连hexo如何使用都已经忘了。幸好之前的设置代码都还保存在Bitbucket里面，花了一点时间才把才把博客在本地架起来。 这篇博客记录了这个hexo-based博客的workflow。 安装hexo，同步repo安装Hexo的方法很简单，首先要保证系统中安装了npm。然后： 1npm install hexo-cli -g 我用的">
-<meta property="article:published_time" content="2018-01-29T01:32:46.000Z">
-<meta property="article:modified_time" content="2025-11-12T03:11:14.891Z">
+<meta property="og:description" content="Skadoosh!">
 <meta property="article:author" content="erain">
-<meta property="article:tag" content="犬">
 <meta name="twitter:card" content="summary">
 
 
@@ -122,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.yiyu.me/2018/01/28/blog-work-flow/"/>
+  <link rel="canonical" href="http://blog.yiyu.me/page/2/"/>
 
 
 
 
 
-  <title> Hexo博客Workflow | 不厌其烦 </title>
+  <title> 不厌其烦 </title>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -149,7 +146,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -230,9 +229,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -241,7 +240,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2018/01/28/blog-work-flow/">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2016/12/31/hello-world/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="erain">
@@ -265,7 +264,10 @@
             
             
               
-                Hexo博客Workflow
+                
+                <a class="post-title-link" href="/2016/12/31/hello-world/" itemprop="url">
+                  Hello World
+                </a>
               
             
           </h1>
@@ -280,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-28T20:32:46-05:00">
-                2018-01-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-31T20:35:01-05:00">
+                2016-12-31
               </time>
             
 
@@ -316,79 +318,48 @@
       
 
       
-        <p>定下了2018年的新年愿望为“多写博客”后，上一次更新还是一年以前…连<a href="https://hexo.io" target="_blank" rel="noopener">hexo</a>如何使用都已经忘了。幸好之前的设置代码都还保存在Bitbucket里面，花了一点时间才把才把博客在本地架起来。</p>
-<p>这篇博客记录了这个<code>hexo-based</code>博客的workflow。</p>
-<h3 id="安装hexo，同步repo"><a href="#安装hexo，同步repo" class="headerlink" title="安装hexo，同步repo"></a>安装hexo，同步repo</h3><p>安装Hexo的方法很简单，首先要保证系统中安装了<a href="https://www.npmjs.com" target="_blank" rel="noopener">npm</a>。然后：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<p>我用的是theme是修改过的<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">next</a>。如果需要修改：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@bitbucket.org:erain/hexo-theme-next-erain.git</span><br></pre></td></tr></table></figure>
-<p>博客代码中已经把theme加成了<a href="https://github.com/blog/2104-working-with-submodules" target="_blank" rel="noopener">git submodule</a>。因此，如果不需要修改theme的时候，只需要：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@bitbucket.org:erain/src-blog-yiyu-me.git</span><br><span class="line"><span class="built_in">cd</span> src-blog-yiyu-me</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<h3 id="写作、部署"><a href="#写作、部署" class="headerlink" title="写作、部署"></a>写作、部署</h3><p>要写一篇新博客、预览</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new new-blog-name</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>发布新的博客</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br><span class="line"># also commit in the blog source</span><br><span class="line">git commit -am &quot;add a new blog&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+        
+          
+            <p>距离上次写博客可能有5年了吧……当时还是个刚从学校毕业充满憧憬的学生，现在已经变成了一个愤世嫉俗的犬儒主义大叔了……</p>
+<p>但是，文章还是要写的，万一有人看呢？新的博客地址在 <a href="http://blog.yiyu.me">blog.yiyu.me</a> ，直接host在GitHub上，请多关照。</p>
+<p>最后按照历史惯例第一篇博客来一段Hello World：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python -c <span class="string">"print 'hello world'"</span></span><br></pre></td></tr></table></figure>
 
+          
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/%E7%8A%AC/" rel="tag"># 犬</a>
-          
-        </div>
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/01/07/amazon-goodbye/" rel="next" title="别了Amazon——一个工程师在Amazon两年的感悟">
-                <i class="fa fa-chevron-left"></i> 别了Amazon——一个工程师在Amazon两年的感悟
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/29/hello-2019/" rel="prev" title="Hello World 2019">
-                Hello World 2019 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -396,10 +367,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -419,17 +386,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg"
@@ -516,22 +474,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo，同步repo"><span class="nav-number">1.</span> <span class="nav-text">安装hexo，同步repo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写作、部署"><span class="nav-number">2.</span> <span class="nav-text">写作、部署</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
@@ -637,10 +579,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
 
   
 

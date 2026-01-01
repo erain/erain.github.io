@@ -1,38 +1,692 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!doctype html>
 
 
-{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="声," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="时间我出生于1985年11月11日，到2025年11月11日的今天，已经年满四十岁了。 孔子曰：三十而立，四十不惑。 我在年满三十岁的时候，其实并没有而立的感觉，还觉得自己是一个年轻人，可以大大方方地宣称“与其苟延残喘，不如纵情燃烧”，怀着一颗摇滚的心随时可以和世界干架。 如今到了四十岁，无论如何都无法否认自己已经不再年轻的事实。村上春树写道，自己参加铁人三项的自行车，车身上写着 18 Til I">
+<meta property="og:type" content="article">
+<meta property="og:title" content="40-years-old">
+<meta property="og:url" content="http://blog.yiyu.me/2025/11/11/40-years-old/index.html">
+<meta property="og:site_name" content="不厌其烦">
+<meta property="og:description" content="时间我出生于1985年11月11日，到2025年11月11日的今天，已经年满四十岁了。 孔子曰：三十而立，四十不惑。 我在年满三十岁的时候，其实并没有而立的感觉，还觉得自己是一个年轻人，可以大大方方地宣称“与其苟延残喘，不如纵情燃烧”，怀着一颗摇滚的心随时可以和世界干架。 如今到了四十岁，无论如何都无法否认自己已经不再年轻的事实。村上春树写道，自己参加铁人三项的自行车，车身上写着 18 Til I">
+<meta property="article:published_time" content="2025-11-12T03:11:53.000Z">
+<meta property="article:modified_time" content="2025-11-12T03:47:12.073Z">
+<meta property="article:author" content="erain">
+<meta property="article:tag" content="声">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.yiyu.me/2025/11/11/40-years-old/"/>
+
+
+
+
+
+  <title> 40-years-old | 不厌其烦 </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">不厌其烦</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2025/11/11/40-years-old/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                40-years-old
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2025-11-11T22:11:53-05:00">
+                2025-11-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><p>我出生于1985年11月11日，到2025年11月11日的今天，已经年满四十岁了。</p>
+<p>孔子曰：三十而立，四十不惑。</p>
+<p>我在年满三十岁的时候，其实并没有而立的感觉，还觉得自己是一个年轻人，可以大大方方地宣称“与其苟延残喘，不如纵情燃烧”，怀着一颗摇滚的心随时可以和世界干架。</p>
+<p>如今到了四十岁，无论如何都无法否认自己已经不再年轻的事实。村上春树写道，自己参加铁人三项的自行车，车身上写着 18 Til I Die ，然后语气一转：“当然是开玩笑。真想至死都是十八岁，只有在十八岁时死去。”</p>
+<p>冯唐写下了“用文字打败时间”这样的豪言壮语。文字是无法打败时间的，文字只能记录时间。所以还是为四十岁留下多一点点的记录吧。</p>
+<h3 id="艺术家"><a href="#艺术家" class="headerlink" title="艺术家"></a>艺术家</h3><p>身处IT行业，意味着永远有新的东西需要学习和追赶。这表面听起来是一种非常“先进”的生活方式，然而真正身处其中，会发现大家的身份认同好像聚焦于在什么公司工作、级别是怎么样的、有多少钱…据说在程序员集中的地方比如硅谷，走进一个中餐厅，也许会发现每一桌都在谈这个同样的话题。</p>
+<p>一转眼，AI热潮来了。程序员们一边心照不宣自己的工作有一天会被AI代替，一边被公司的大棒加胡萝卜加班加点地开发替代自己的流水线。这是一种身份危机。</p>
+<p>我处理身份危机的解决方案，来源于几年前小唐老师有一天在群里闲聊时说“世界上再也没有第二个人像我这样弹吉他”。它的意思当然不是小唐老师自称世界第一的吉他手，而是他对于自己弹吉他的独一无二性的一个表达。我心里一直潜伏的一个想法一下子就被点醒了：我的生命只有一次，只有以一个艺术家的心态生活和自我表达，才能保证自己作为个体的独一无二。</p>
+<h3 id="金钱"><a href="#金钱" class="headerlink" title="金钱"></a>金钱</h3><p>再来说说金钱。钱当然是好东西，而且在某一个阈值之前，钱的增加可以显著增加幸福感。但是过了这个阈值之后，钱能带来的幸福感提升就很有限了。</p>
+<p>我和很多朋友都说过这个小事：我的“人生吉他”是Gibson Hummingbird，大约5000加币上下。我曾经心想一旦升级到了L5我就把它买了，到了L5我并没有买; 然后我想到了L6我就把它买了，到了L6我还是没有买——因为我发现这把琴是我唯一想买的东西，一旦我买到了，我就再也没有想买的东西了。</p>
+<p>我现在的理解，人生中真正有意义而又相对公平的“货币”只有一个，那就是“时间”。尽管有一些变化，但是每个人拥有的时间都大体差不多。每个人都在花费着自己的时间，换取自己独一无二的记忆与经验。</p>
+<p>从这个角度看，我对自己前面四十年花掉的时间所换回来的记忆和现在很满意。如果可以重活一次，我会按照之前一模一样路径交换一模一样的记忆。</p>
+<h3 id="自己"><a href="#自己" class="headerlink" title="自己"></a>自己</h3><p>我有两部疯狂迷恋的美剧：“绝命毒师”和“绝命律师”。两部剧的主角们身上都有一个相同特质令我感同身受——</p>
+<p>绝命毒师老白在整整五季的时间里，面对妻子的质问，他都是理直气壮而略带脾气地回复“我所做的这一切都是为了这个家！”。然而到了全剧终结，他最后一次面对妻子的怒吼“你再敢说一次为这个家…！”，他缓缓地说：</p>
+<p style="text-align:center">“I did it for me. I liked it. I was good at it. And, I was really… I was alive.”</p>
+
+<p style="text-align:center">“我做这一切都是为了我自己。我喜欢做这些。我很擅长做这些。我感觉…我感觉自己在真正活着。”</p>
+
+<p>就结束在这里吧。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%A3%B0/" rel="tag"># 声</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/01/01/2020-year-end/" rel="next" title="2020年终总结">
+                <i class="fa fa-chevron-left"></i> 2020年终总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2025/12/31/2025-year-end/" rel="prev" title="2025年终总结">
+                2025年终总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg"
+               alt="erain" />
+          <p class="site-author-name" itemprop="name">erain</p>
+          <p class="site-description motion-element" itemprop="description">Skadoosh!</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/erain9/" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erain/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/erain" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/erain/" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>
+                  
+                  Instagram
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#时间"><span class="nav-number">1.</span> <span class="nav-text">时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#艺术家"><span class="nav-number">2.</span> <span class="nav-text">艺术家</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#金钱"><span class="nav-number">3.</span> <span class="nav-text">金钱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自己"><span class="nav-number">4.</span> <span class="nav-text">自己</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">erain</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

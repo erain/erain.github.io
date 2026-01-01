@@ -1,23 +1,1898 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!doctype html>
 
-{% block title %} {{ config.title }} {% endblock %}
 
-{% block page_class %}
-  {% if is_home() %} page-home {% endif %}
-{% endblock %}
 
-{% block content %}
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Skadoosh!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="不厌其烦">
+<meta property="og:url" content="http://blog.yiyu.me/index.html">
+<meta property="og:site_name" content="不厌其烦">
+<meta property="og:description" content="Skadoosh!">
+<meta property="article:author" content="erain">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.yiyu.me/"/>
+
+
+
+
+
+  <title> 不厌其烦 </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">不厌其烦</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2025/12/31/2025-year-end/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2025/12/31/2025-year-end/" itemprop="url">
+                  2025年终总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2025-12-31T22:33:00-05:00">
+                2025-12-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://storage.googleapis.com/11-technology-static/2025-year-end-optimized.jpg" alt="2025年家人合照"></p>
+<p>作为一个居住在西半球的人，能看到自己在东半球的朋友圈率先进入2026年，收到他们的新年祝福，而自己仍然还留在2025年。</p>
+<p>终于到了2025年的最后一个小时，我纠结的点居然是“我应该用这一个小时看看最新的按个Claude Code教程，还是写一下2025的年度总结”。这个纠结的点从某种意义上可以作为2025年度总结。</p>
+<p>最后，想想自己在<a href="https://blog.yiyu.me/2025/11/11/40-years-old/">40岁生日时写下的</a>“文字是无法打败时间的，文字只能记录时间。”，还是选择写年度总结吧。照例想到哪说到哪，也<a href="https://blog.yiyu.me/2017/01/01/2016-year-end/">照例</a>用电影《甲方乙方》的年度梗开头：</p>
+<blockquote>
+<p>2025年过去了，我很怀念它。</p>
+</blockquote>
+<h3 id="壹"><a href="#壹" class="headerlink" title="壹"></a><center>壹</center></h3><p>我有闲不下来的性格，所以所谓的FIRE (Financial Independence, Retire Early)对我没啥吸引力——早早退休，那每天该干啥啊……几乎所有以”我如果退休了我就“开头的事情其实都是可以现在就做的。</p>
+<p>今年尝试做了很多事情，尤其在年初，在不少时候甚至都在一个人做两个人的事情。先说坏处：这些事情大多数都失败了。再说好处：这些事情大多数都失败了。（鲁迅：？？？）</p>
+<p>我在2025 过了大半的时候才大致想清楚了<strong>对于我自己</strong>人生的意义：”每个人都在花费着自己的时间，换取自己独一无二的记忆与经验。“所以只要尝试过，成功或者失败没那么重要。</p>
+<h3 id="貳"><a href="#貳" class="headerlink" title="貳"></a><center>貳</center></h3><p>上面那小节非常像鸡汤，所以不妨再展开说明一下。</p>
+<p>传统意义上人生的意义很大程度上是”成功“，获得比如金钱或者地位。然而，现在这个时代是人类历史上某种程度上最”平权“的时代：</p>
+<ul>
+<li>一个年轻人攒钱可以买到的最新一代的iPhone，全世界最有钱的富人们并不能买到更先进的iPhone; </li>
+<li>坐头等舱的人和坐经济舱的人会花费同样的时间到达目的地; </li>
+<li>AI（无论是ChatGPT、Claude、Gemini、DeepSeek、豆包）能让全世界每个人几乎无门槛的接触到人类历史上所有的知识和经验。</li>
+</ul>
+<p>所以，钱还是好东西，但是在收入到达某一条线之后，追求更多的金钱的边际效益并不高。不妨追求点别的东西。四十不惑，我做出了我的选择。</p>
+<h3 id="叁"><a href="#叁" class="headerlink" title="叁"></a><center>叁</center></h3><p>2025年和家人过得很开心，带着家人们或近或园、或规划或随性地去过了许多地方，留下了非常多美好的记忆。</p>
+<p>人到四十，能和自己的爸爸妈妈太太女儿在同一个家里生活，吃穿不愁，健健康康，夫复何求。</p>
+<p>牛油果的生日恰好是12月31日，今天也就是她的4岁生日。她现在开始越来越有自己的个性，越来越会直接地表达自己的喜好。刚刚，她为了和我玩，硬撑着不睡觉，直到我半威胁着才趴在我身上在客厅的沙发睡着。我抱着呼呼睡着了的她上楼去她的房间，沉甸甸的，想起4年前她还是个小不点的时候我也这样抱着她，不禁微笑了起来。</p>
+<p>牛油果呀，你就继续黏着爸爸吧，爸爸尽量不嫌你烦啦。总有一天你会想自己呆着，不再黏着我，那一天我该有多伤心呀。</p>
+<h3 id="肆"><a href="#肆" class="headerlink" title="肆"></a><center>肆</center></h3><p>2025工作上还算顺利，但在过程中压力不小。</p>
+<p>从去年到今年两次被Escalate的VP，然后再通过合作把问题解决。我甚至和我的老板亚当开玩笑：我觉得我们的合作模式很好，我负责唱黑脸把人搞毛，然后你再过来唱白脸把关系缓和，最后大家吵着吵着找到一个合理的方案把事情办了。在这个过程中皮厚了不少。</p>
+<p>工作顺利主要靠的是团队的小伙伴们给力。我作为经理比较骄傲的一点就是，哪怕公司、业界的大环境在逼迫大家都卷起来，我们的小伙伴们基本上还能在卷中保持着一定程度的开心，以及大家都对参与锻炼特别是羽毛球很有热情。我时不时在办公室里说：工作是上面的，打球是自己的——2026大家都多一起打球吧！</p>
+<p>（这里其实暗搓搓的藏着一则我很喜欢的苏联小笑话：美国工人参观苏联的汽车厂，苏联工人说“工厂是我们的，汽车是上面的”，美国工人说“我们就没有那么幸运了，工厂是上面的，汽车是我们的”。）</p>
+<h3 id="伍"><a href="#伍" class="headerlink" title="伍"></a><center>伍</center></h3><p>颜如晶在2025年跑了1000公里，参加10公里半马什么的，然后一斤也没瘦。——因为她没有控制饮食。</p>
+<p>我是从2024年7月1日开始规律锻炼的，到了2025年底，以一个非常缓慢的龟速减了大概6.5公斤的体重。在这个过程中，我有过一周七天游泳但是体重不降反增的阶段，也有到现在比较有信心能让体重继续均匀下降的阶段。</p>
+<p>减肥的秘诀，无它，必须得减少总体热量的摄入。现代人的从食物中能获得的热量已经过剩，身边又都是高糖的环境，如果维持这正常的“一日三餐”，必然摄入热量超标。我的方法很简单，把早餐这一顿尽量简化——一根香蕉加一杯咖啡。</p>
+<p>再说健身，一个很大的知识收获是，健身的英文Fitness的本意是能适应各种环境的意思。因此我的健身从2024年的单纯游泳开始加入了各种运动的变化：周二的乒乓球，周四的羽毛球（每周最快乐的时光！），断断续续参加过几次的高温瑜伽，乃至铲雪。</p>
+<p>总的来说我对自己2025年在健康方面的进展挺满意。2026年继续保持吧，争取在2026年终总结的时候不害臊汇报自己的绝对体重。</p>
+<h3 id="陆"><a href="#陆" class="headerlink" title="陆"></a><center>陆</center></h3><p>还在继续学日语，迄今已经2157天。和减肥一样也是龟速。</p>
+<p>今年还加入了法语。这是因为牛油果开始上双语学校，有半天时间都是法语授课。我想和她一起学。也算是一个榜样吧。</p>
+<p>我是用Duolingo学习的，一般都是先学一两课法语，再学一两课日语。因为对两者的掌握情况的不同，经常在法语转化到日语的时候感慨：啊日语听着正常多了…</p>
+<p>一个发现：学会语言的难度，至少是心理上的难度，是随着语言的增加而降低的。继续龟速学吧，希望这俩有一天能用上。</p>
+<h3 id="柒"><a href="#柒" class="headerlink" title="柒"></a><center>柒</center></h3><p>2025年看了不少演出，全部在多伦多：2月15日的痛仰，3月26日的梁静茹，7月22日的The fin.，12月12日的陶喆。</p>
+<p>没有刻意去了解和听新的音乐，但是对于各类音乐的宽容程度更多了。仔细想想，听得最多的专辑也许是李云迪版本的肖邦的《夜曲》！也会因为看了Justin Bieber在车里哼唱一段圣诞歌曲而感慨他的嗓子到底有多好。</p>
+<p>录了不少弹唱，弹得不好唱得也不好。不管怎样2026年还是要多唱歌。</p>
+<h3 id="捌"><a href="#捌" class="headerlink" title="捌"></a><center>捌</center></h3><p>币圈……咱不说了吧。</p>
+<h3 id="玖"><a href="#玖" class="headerlink" title="玖"></a><center>玖</center></h3><p>用AI结尾吧。</p>
+<p>人们对AI的抱怨，从一年多一点前“AI胡编乱造”，到现在“AI没办法第一次就把我的完整应用全部写完！”AI的发展日新月异可见一斑。</p>
+<p>我经历了人类IT发展的三次爆发阶段：2000年前后的互联网阶段，2010年前后的手机互联网阶段，以及现在进行时的AI时代。</p>
+<p>在人类历史之前所有的时代，知识和经验都是稀缺资源，人们往往要通过很大的努力才能部分掌握某一个领域的部分，跨领域的难度极大。AI或者准确的说大语言模型，本质上是通过规模效应把人类所有的能获取到的知识和经验压缩成了一个巨大的压缩包，并且每个人都能<strong>几乎无门槛</strong>地使用这些知识和经验。这对整个人类社会的各个方面，比如以记忆知识为主要部分的教育，会有什么样的影响，谁都不知道。</p>
+<p>作为一个技术人身处这样的浪潮之中，很难不为AI技术中的各种可能性而感到激动。有一个流行起来的词，“超级个体”，指的是最大限度运用AI技术增强自身能力使自己成为多面手(generalist)的这么一个个人发展方向。在2026年，我希望自己好好磨好AI这把刀，把柴砍得又快又好，看看自己朝着超级个体的方向能走多远吧。</p>
+<h3 id="拾"><a href="#拾" class="headerlink" title="拾"></a><center><strong>拾</strong></center></h3><p>最后：开心一点吧，我的朋友！祝你2026年新年快乐！咱们多聊天，多笑，有机会的话多聚！</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2025/11/11/40-years-old/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2025/11/11/40-years-old/" itemprop="url">
+                  40-years-old
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2025-11-11T22:11:53-05:00">
+                2025-11-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><p>我出生于1985年11月11日，到2025年11月11日的今天，已经年满四十岁了。</p>
+<p>孔子曰：三十而立，四十不惑。</p>
+<p>我在年满三十岁的时候，其实并没有而立的感觉，还觉得自己是一个年轻人，可以大大方方地宣称“与其苟延残喘，不如纵情燃烧”，怀着一颗摇滚的心随时可以和世界干架。</p>
+<p>如今到了四十岁，无论如何都无法否认自己已经不再年轻的事实。村上春树写道，自己参加铁人三项的自行车，车身上写着 18 Til I Die ，然后语气一转：“当然是开玩笑。真想至死都是十八岁，只有在十八岁时死去。”</p>
+<p>冯唐写下了“用文字打败时间”这样的豪言壮语。文字是无法打败时间的，文字只能记录时间。所以还是为四十岁留下多一点点的记录吧。</p>
+<h3 id="艺术家"><a href="#艺术家" class="headerlink" title="艺术家"></a>艺术家</h3><p>身处IT行业，意味着永远有新的东西需要学习和追赶。这表面听起来是一种非常“先进”的生活方式，然而真正身处其中，会发现大家的身份认同好像聚焦于在什么公司工作、级别是怎么样的、有多少钱…据说在程序员集中的地方比如硅谷，走进一个中餐厅，也许会发现每一桌都在谈这个同样的话题。</p>
+<p>一转眼，AI热潮来了。程序员们一边心照不宣自己的工作有一天会被AI代替，一边被公司的大棒加胡萝卜加班加点地开发替代自己的流水线。这是一种身份危机。</p>
+<p>我处理身份危机的解决方案，来源于几年前小唐老师有一天在群里闲聊时说“世界上再也没有第二个人像我这样弹吉他”。它的意思当然不是小唐老师自称世界第一的吉他手，而是他对于自己弹吉他的独一无二性的一个表达。我心里一直潜伏的一个想法一下子就被点醒了：我的生命只有一次，只有以一个艺术家的心态生活和自我表达，才能保证自己作为个体的独一无二。</p>
+<h3 id="金钱"><a href="#金钱" class="headerlink" title="金钱"></a>金钱</h3><p>再来说说金钱。钱当然是好东西，而且在某一个阈值之前，钱的增加可以显著增加幸福感。但是过了这个阈值之后，钱能带来的幸福感提升就很有限了。</p>
+<p>我和很多朋友都说过这个小事：我的“人生吉他”是Gibson Hummingbird，大约5000加币上下。我曾经心想一旦升级到了L5我就把它买了，到了L5我并没有买; 然后我想到了L6我就把它买了，到了L6我还是没有买——因为我发现这把琴是我唯一想买的东西，一旦我买到了，我就再也没有想买的东西了。</p>
+<p>我现在的理解，人生中真正有意义而又相对公平的“货币”只有一个，那就是“时间”。尽管有一些变化，但是每个人拥有的时间都大体差不多。每个人都在花费着自己的时间，换取自己独一无二的记忆与经验。</p>
+<p>从这个角度看，我对自己前面四十年花掉的时间所换回来的记忆和现在很满意。如果可以重活一次，我会按照之前一模一样路径交换一模一样的记忆。</p>
+<h3 id="自己"><a href="#自己" class="headerlink" title="自己"></a>自己</h3><p>我有两部疯狂迷恋的美剧：“绝命毒师”和“绝命律师”。两部剧的主角们身上都有一个相同特质令我感同身受——</p>
+<p>绝命毒师老白在整整五季的时间里，面对妻子的质问，他都是理直气壮而略带脾气地回复“我所做的这一切都是为了这个家！”。然而到了全剧终结，他最后一次面对妻子的怒吼“你再敢说一次为这个家…！”，他缓缓地说：</p>
+<p style="text-align:center">“I did it for me. I liked it. I was good at it. And, I was really… I was alive.”</p>
+
+<p style="text-align:center">“我做这一切都是为了我自己。我喜欢做这些。我很擅长做这些。我感觉…我感觉自己在真正活着。”</p>
+
+<p>就结束在这里吧。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2021/01/01/2020-year-end/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2021/01/01/2020-year-end/" itemprop="url">
+                  2020年终总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-01-01T10:52:19-05:00">
+                2021-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://storage.googleapis.com/11-technology-static/2020-year-end.jpg" alt="2020 Year End"></p>
+<p>2020年就这样过去了。</p>
+<p>在1990年代还在上小学的我会在作文里幻想，到2020年我应该被机器人助手叫醒，然后坐着小型私人智能飞船去火星上班。真实的2020年没有机器人也没有飞船，只有全世界几十亿人类全都被关在家里刷手机看社交网络的各种负面新闻觉得世界就要毁灭了。</p>
+<p>但回想起来，2020年还算是善待了我（相比起对待其他人而言）。所以我不准备抱怨它。</p>
+<h3 id="生活"><a href="#生活" class="headerlink" title="生活"></a><center>生活</center></h3><p>2020年生活的关键词对于绝大多数的人，尤其是身处海外的人，来说是因为COVID-19的“隔离”。对我来说却是“家人”。</p>
+<p>我的父母19年末来到加拿大看望我，原本的计划是20年2月回国。结果因为国内COVID-19的爆发，“太危险了！”，所以我们毅然决然的取消了回国的机票（事实上，航司几乎在同时也决定了取消航班）。结果等到国内的疫情得到有效控制，和我们一样身处海外的中国人反而变成了危险源而很难回去了…</p>
+<p>所以，在我2004年离开家门去上大学以后，在2020年又一次与父母生活在了一起一整年。只不过这次从三口之家变成了四口之家，各自的身份角色也发生了变化——父母终于不再是“家长”，而只是“父母”。两代人住在一起总会有习惯和理念的不同，但能借着这样一个奇怪的机会长时间陪伴彼此总是一件值得感恩的事情。在秋天的时候，加拿大疫情稍缓，我们会每周随机找一个附近的城市开车过去，准备吃的喝的，找一些人少的地方逛上一整天，其乐融融。</p>
+<p>对生活的其它方面，“隔离”其实并不使我太难受。我在大学期间在南宁和北京都分别住院过一次，而回想起来住院的那段时间都是我觉得最平静的时候。这次因为疫情的隔离虽然不一样，但也有类似的地方，希望多年后想起来的感受也是同样是平静。</p>
+<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a><center>工作</center></h3><p>2020年是我在Google工作的第四年，也是我开始工作后的第十年。如我之前所说，Google是我到目前为止唯一一家在工作一年之后完全没有“是不是该换家公司啦”感觉的公司，也是第一家让我觉得“在这里干到退休也不错”的公司。</p>
+<p>今年的工作出乎意外的顺利，也出乎意外的忙，当然这两者之间也许有因果关系。工作内容还是在Kubernetes这个我最喜欢的技术领域，只不过侧重点从之前的Multi-Tenancy（多租户）转到了Observability（可观测性）以及Multi-/Hybrid-Cloud（多云托管/混合云）。因为Multi-/Hybrid-Cloud是云计算的新形态，因此Observability的问题就变成了格外突出；另一方面Observability是一个相对较“软”的技术方向，所以如何在技术上给自己和团队找到一些有挑战、有影响力、成体系的项目就变得格外重要。</p>
+<p>工作方法上，我越来越体会到Opinionated的好处。Opinionated中文并不好翻译，通常译作“自以为是的”，实际的意思是“有强烈倾向性意见的”。这是因为，在很多时候做决策的时候并没有最优解——不光自己没有最优解，别的甚至是高级别的人也不会有最优解，所以就会出现几个高级别的人彼此之间给出的决策建议是相反的情况。自己作为决策的实际执行者其实是最了解问题细节的人，只有自己Opinionated并且敢于做决策，才有最大的概率把决策作对。反过来，A Wrong Decision Is Better Than Indecision（错误的决定优于没有决定），“快速试错”也是产品迭代以及自身成长的好方法之一。</p>
+<p>本来想在入职纪念日那天写一篇博客“Google四年”，结果拖延症一下子就到了现在。让我们拭目以待那篇博客会出现还是会变成“Google五年”。:smile:</p>
+<h3 id="艺术家"><a href="#艺术家" class="headerlink" title="艺术家"></a><center>艺术家</center></h3><p>这一节的标题是“艺术家”，其实是今年我对自身定位的目标——所谓艺术家，是审视自身的独特性并且重视内容输出的人。我想更多的输出内容。</p>
+<p>缘起是有一次看到小唐老师在群里闲聊的时候说“我觉得这世界上没有第二个人能和我一样弹吉他”，心里非常羡慕。那句话的意思当然不是小唐是世界第一吉他手——虽然小唐弹得也非常好——那句话的意思是他在“弹吉他”这个事情上的自身的独特性。我又想起了自己在各种社交网络的影响下，变得越来越习惯消费碎片内容而非输出内容。消费碎片只会让自身变成碎片，人生只有几十年，我不想变成碎片，我想变成一个哪怕微不足道但独特的“我”。</p>
+<p>今年开启了两个视频内容项目。一个是<a href="https://weibo.com/u/1082251714?tabtype=video&amp;layerid=4587816065964701" target="_blank" rel="noopener">#程序员问程序员</a>系列，这是一个程序员的访谈节目。它起源于我在每天工作中要开大量的视频会议，于是我就想着找一些不算熟悉的程序员小伙伴能够进行线上闲聊。我是一个特别爱说话的人，在做节目的过程中要让自己学会更多的听人说话，这是一个意想不到的事情。另一个是更私人的<a href="https://weibo.com/u/1082251714?tabtype=video&amp;layerid=4588367250988274" target="_blank" rel="noopener">#同一首歌</a>系列，主要分享我一些音乐视频，自己作为一个吉他手和歌手，哪怕是三流的，也要有自己的声音吧。</p>
+<h3 id="愿望"><a href="#愿望" class="headerlink" title="愿望"></a><center>愿望</center></h3><p>如果2020年是人的话，它肯定过得很委屈：“为什么都在赶我走？”事实上，日历上的时间从2020年12月31日变成2021年1月1日，世界仍然按照它固有的节奏运转——疫情依然严重，居家隔离不知道还要维持多久…</p>
+<p>所以，我的2021新年愿望是：希望在2021年能离开家门，不用任何担心地坐一次飞机去某个地方吧。这个新年愿望换句话说就是：世界和平。</p>
+<p><img src="https://storage.googleapis.com/11-technology-static/2020-year-end-3.jpg" alt="2020 Year End"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2020/09/25/remember-lao-luo/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/09/25/remember-lao-luo/" itemprop="url">
+                  纪念我的老师罗卫国
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-25T21:04:38-04:00">
+                2020-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>我还是想叫他老罗。</p>
+<p>老罗走了，2020年9月24日，年仅58岁。对很多人，他是罗校长、罗书记。对于我和柳州八中98（10）班的同学来说，他是老罗，我们的班主任和数学老师老罗，我们的老罗。</p>
+<p>久未有人发言的初中班级群里突然炸了锅，26号周六追悼会，大家都张罗着要给老罗告别。有一些同学在柳州或者能回到柳州参加追悼会，给花店打电话定花圈，还没开口，那边就问：“是给罗老师的吧？”</p>
+<p>大家又讨论给老罗什么挽联。在几条深情而又中正的提议以后，其中一个说：“完了，我想的非常不正经…主要是，我觉得正经八百的，不是他。”然后画风就变了。</p>
+<p>“全世界最洒脱不羁的美男子走了，希望下辈子还做你的学生。——致最好的老师与挚友”</p>
+<p>“最潇洒不羁的美男子走了，今生音容难觅；最真诚恳挚的师生情仍然，来世还望赐教”——兼顾了严肃和活泼？</p>
+<p>“深切怀念我们最敬爱的良师益友‘老罗’，师恩如海，永生难忘。”</p>
+<p>……</p>
+<p>我并记不清老罗教过什么具体的知识或者人生道理了。隐隐约约记得他说过数学就是底下只有几条最基本的公理，上面高深的知识都可以从这最基本的几条一层一层推导出来。他的神情和样子却栩栩如生：高高大大，永远带着和蔼的微笑，循循善诱的样子。班里的同学有时当着他的面一不小心就把“罗老师”叫成“老罗”，他听后会哈哈一笑。而我的名字他的发音老是不标准，总是把我叫做“易易”：“易易，你来说说这道题。”</p>
+<p>我心里还有老罗的一个片段。时间应该是2000年我们刚初二升初三的那个暑假，他在一个新装修的电教室给我们讲了一些奥数。然后老罗突然就把电教室的灯光全部关掉了，打开了投影仪，然后给我们播放了一场现场演奏——The Eagles乐队1992年那场永恒的不插电经典“Hotel California”。当年的我并不知道这个乐队和这首歌，但马上注意到教室里还有两个在当年听来音质堪称完美的高保真音箱。在黑漆漆的教室中，老罗和我们坐在一起，沉默无言，很快大家都沉浸到优美的木吉他和苍凉又动听的歌声中了。一曲终了，我心里充满了一种异样的感动。</p>
+<p>2011年2月，我在新加坡看到了Eagles的演唱会，开场就又听到这首歌，我心中闪过一个念头“要是老罗能在这个现场听到这首歌该有多好啊！”今天，我又听着这首歌，想写下一点点关于老罗的这个也许只有我还记得的片段。</p>
+<p>电影《寻梦环游记（Coco）》说人的一生会死掉三次，第一次是心脏停止，第二次是人们出席葬礼，第三次是当世界上最后一个记得你的人把你忘记——这时人才真正死去。愿我这篇微不足道的只言片语，能变成这个数字时代里永远不会忘记老罗的一点点数据。</p>
+<p>老罗，再见。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2020/03/28/world-peace/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2020/03/28/world-peace/" itemprop="url">
+                  山海
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-28T15:04:22-04:00">
+                2020-03-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://storage.googleapis.com/11-technology-static/sea-mountain.JPG" alt="山海"></p>
+<h3 id="壹"><a href="#壹" class="headerlink" title="壹"></a><center>壹</center></h3><p>小时候我一直对“外国人”感到既好奇又陌生，总觉得那是一群说着英语、金发碧眼、生活优越的人。开始学习英语之后对于这样的印象甚至是加深了，如果遇到有“外教”到访的课堂，就支支吾吾躲在人群里不敢说话。</p>
+<p>真正开始逐渐改变这样的印象，是到了北京之后，在大学里面不务正业搞音乐。一次在清华独峰书屋办演出，来了一只外国人乐队，演出结束之后，老板请大家吃Pizza，老外纷纷上手一人拿一块张嘴大啃。我有点疑惑：Pizza就应该这样吃么？老外回答，那当然，用刀叉吃Pizza，“We call it ZhuangBi.（我们把那叫“装逼”）”于是大家哈哈大笑。</p>
+<p>在毕业前最后一年终于和认识很久的华山熟络起来了。和他一块儿夜里绕着紫操跑步的时候，听他用七八种语言唱“国际歌”，说起各个语言版本的区别，第一次对“语言”而非“外语”心向往之。他还带着我去后海参加了一个老外的Party，哪国都有的一大群人在一个酒吧吃饭喝酒唱歌，我还上台唱了几首，记不得唱了什么了，只记得那天夜里骑车经过的新街口。</p>
+<p>有一天华山让我帮他弹吉他伴奏一首俄语歌曲。原来2009年是“中国俄语年”，俄国大使馆在清华举办了一场庆祝活动。我们上台，表演，台下响起了掌声。华山这个时候对着话筒说了一句：“Общение приносит мир，交流带来和平。”</p>
+<h3 id="貳"><a href="#貳" class="headerlink" title="貳"></a><center>貳</center></h3><p>离开北京之后，走过的地方逐渐变多了起来。新加坡住了5年多，加拿大西部的温哥华住了2年，如今已经在加拿大东部的滑铁卢住了超过3年。而仅仅在Google的3年多，我就已经去过了Google在不同国家和地区的15个不同办公室。年轻时候向往的看一看更大的世界的愿望也得到了满足——无论是陈绮贞的“旅行的意义”，还是许巍的“曾梦想仗剑走天涯，看一看世界的繁华”。</p>
+<p>随着走过的地方越来越多，英语也渐渐从我的“外语”变成了我的“语言”。“老外”这个大而朦胧的概念也逐渐瓦解，变成一个又一个具体的国家和地区的一个又一个具体的人。</p>
+<p>新加坡隔壁实验室的印度师兄，带我们去吃任意给钱的印度咖喱自助餐，并且和我讲了半天印度教里的孙悟空——是一只拿着巨锤的猴子王。Google同一个组的约旦大哥，绘声绘色的说起他老爸买了一辆小轿车，为了省钱只买了一侧的后视镜……我才第一次知道阿拉伯除了不差钱的土豪也有抠门的普通人。在Amazon时候有一天我看了一个纪录片之后激动的跑去问南非小哥：“你认识Rodriguez么？”他高兴的回答：“当然啦，Sugarman嘛！”那一刻我是如此的由衷的感到开心！（纪录片是《Searching for Sugar Man》，强烈推荐。）</p>
+<p>王朔在一篇小说里说过：“没有人，没有人民，只有张三、李四、王二麻子。”说的正是这样笼统概念的瓦解和变成具象的过程。但另一方面，在国内的的时候，在不同的城市里都会有相似感，脑海里就会出现一句大白话——“我的祖国到处都一样。”出国之后，国内的相似感被异国情调所取代，但脑海里又忍不住出现另外一句大白话——“世界上还是好人多啊。”</p>
+<h3 id="叁"><a href="#叁" class="headerlink" title="叁"></a><center>叁</center></h3><p>2020年新冠（COVID19）袭击全球。作为“中国人打上半场，外国人打下半场，海外华人打全场”里面“打全场”的一员，我的心情几乎就没有放松过。时至今日，各国该采取的措施也差不多该上了，大家宅在家里不出门病毒也不至于找上门来。</p>
+<p>然而有另外一种不是病毒的东西却让我心情更加沉重，就是那些宣扬国内外对立和割裂的信息，而且往往这些信息都表现为极为劣质的公众号文章——什么外国间谍在地铁里抹口水投毒啦，什么外国死的人太多就地焚烧啦。最让我震惊的往往不是这些信息本身，而是这些信息会因为有人的相信而流传甚广。甚至，我在国内家人和朋友会给我发消息，让我尽早买枪保护自己……</p>
+<p>逐条反驳这些荒谬的信息是很低效的——在逻辑学里面从一个假的前提里什么都能推理出来，你反驳了这一条还会有下一条。我也很仅仅只是想和每个家人和朋友说：“我们这里一切都好，大家都宅家等待着疫情尽快过去。和你们一个月以前做的一模一样。”但又会收到回复：“但是我看到一个公众号说啊你们那边……”</p>
+<p>于是我写下这篇文章，不吐不快。没有外国，没有外国人，只有一个又一个和你、我一样活生生有血有肉有喜怒哀乐的人。并不是有坏人，但是绝大多数都是优缺点的好人。我们并没有什么不同。</p>
+<p>就像，看到那片山和海，你会感到由衷的开心。就像，总有一天，你会融入在人群中间，去看同样的一片山和海。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2019/03/31/vmware-vm-settings/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2019/03/31/vmware-vm-settings/" itemprop="url">
+                  VMWare虚拟机设置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-31T08:10:14-04:00">
+                2019-03-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>因为不想要有多个不同的开发环境，所以这么多年我的主力开发环境一直是Mac。但是有很多情况下又必须使用Linux，比如一些Linux Only的软件的开发比如<a href="https://github.com/containerd/containerd" target="_blank" rel="noopener">Containerd</a>，或者需要搭建一个K8s集群。VMWare虚拟机在这种情况下就是很方便的选择，这篇博客就记录一下一些常用的VMWare虚拟机设置。假定Host是macOS，VMWare版本是VMWare Fusion Pro。</p>
+<h3 id="静态IP设置"><a href="#静态IP设置" class="headerlink" title="静态IP设置"></a>静态IP设置</h3><p>VMWare默认是通过DHCP动态分配IP，这就造成了假设如果我们想要假设一个K8s集群，Master和Nodes没办法得到一个固定的IP进行通信。</p>
+<p>想要设定固定IP也很容易，只要修改一个虚拟网卡的DHCP设置就行了。这个方法来源于<a href="https://willwarren.com/2015/04/02/set-static-ip-address-in-vmware-fusion-7/" target="_blank" rel="noopener">Set a Static IP Address in VMware Fusion 7</a></p>
+<p>首先获得一个虚拟机网卡的MAC地址，如下图所示：</p>
+<p><img src="https://willwarren.com/images/2015/04/Screenshot%202015-04-03%2010.55.45.png" alt="VMWare-VM-Mac-Address"></p>
+<p>然后，在VMWare的默认<code>vmnet8</code>网卡的DHCP设置里增加针对这个MAC地址的静态IP设置。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> /Library/Preferences/VMware Fusion/vmnet8/dhcpd.conf</span></span><br><span class="line"></span><br><span class="line">host vm0 &#123;</span><br><span class="line">	hardware ethernet 00:0C:29:72:88:46;</span><br><span class="line">	fixed-address  172.16.76.130;  				# IPs available are 172.16.76.128~254</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>重启虚拟机和VMWare即可。</p>
+<h3 id="Linux与Host共享目录"><a href="#Linux与Host共享目录" class="headerlink" title="Linux与Host共享目录"></a>Linux与Host共享目录</h3><p>如果是有图形界面的Linux，装上VMWare Tools之后就可以看到贡献的目录了。</p>
+<p>对于没有图形界面的Linux：</p>
+<ol>
+<li><a href="https://docs.vmware.com/en/VMware-Workstation-Pro/15.0/com.vmware.ws.using.doc/GUID-08BB9465-D40A-4E16-9E15-8C016CC8166F.html" target="_blank" rel="noopener">命令行安装VMWare Tools</a>。</li>
+<li><p>在VMWare中共享目录<br><img src="https://storage.googleapis.com/11-technology-static/Screen%20Shot%202019-03-31%20at%208.56.44%20AM.png" alt="vmware-fusion-share-folder"></p>
+</li>
+<li><p>在<code>/etc/fstab</code>中增加相应的mount point:</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.host:/src /home/yiyu/go/src fuse.vmhgfs-fuse allow_other,uid=1000,gid=1000,auto_unmount,defaults 0 0</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2019/03/29/hello-2019/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2019/03/29/hello-2019/" itemprop="url">
+                  Hello World 2019
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-29T09:35:00-04:00">
+                2019-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>很久不来，博客都快长草了。</p>
+<p>还发现前一段因为github免费了private repo，我把存放博客的repo改成了private，结果现在无法访问了…尝试一下推一个新的commit吧看看能不能恢复，如果不能的话再想办法。</p>
+<p>今年是准备开始一个新的博客系列，生活平静而安逸没有什么可以写的，准备写写每周的技术总结。在公司里需要写的周总结叫<code>snippet</code>，博客这个系列也沿用这个名字吧。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2018/01/28/blog-work-flow/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/01/28/blog-work-flow/" itemprop="url">
+                  Hexo博客Workflow
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-28T20:32:46-05:00">
+                2018-01-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>定下了2018年的新年愿望为“多写博客”后，上一次更新还是一年以前…连<a href="https://hexo.io" target="_blank" rel="noopener">hexo</a>如何使用都已经忘了。幸好之前的设置代码都还保存在Bitbucket里面，花了一点时间才把才把博客在本地架起来。</p>
+<p>这篇博客记录了这个<code>hexo-based</code>博客的workflow。</p>
+<h3 id="安装hexo，同步repo"><a href="#安装hexo，同步repo" class="headerlink" title="安装hexo，同步repo"></a>安装hexo，同步repo</h3><p>安装Hexo的方法很简单，首先要保证系统中安装了<a href="https://www.npmjs.com" target="_blank" rel="noopener">npm</a>。然后：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>我用的是theme是修改过的<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">next</a>。如果需要修改：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@bitbucket.org:erain/hexo-theme-next-erain.git</span><br></pre></td></tr></table></figure>
+<p>博客代码中已经把theme加成了<a href="https://github.com/blog/2104-working-with-submodules" target="_blank" rel="noopener">git submodule</a>。因此，如果不需要修改theme的时候，只需要：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@bitbucket.org:erain/src-blog-yiyu-me.git</span><br><span class="line"><span class="built_in">cd</span> src-blog-yiyu-me</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h3 id="写作、部署"><a href="#写作、部署" class="headerlink" title="写作、部署"></a>写作、部署</h3><p>要写一篇新博客、预览</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new new-blog-name</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>发布新的博客</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br><span class="line"># also commit in the blog source</span><br><span class="line">git commit -am &quot;add a new blog&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2017/01/07/amazon-goodbye/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/07/amazon-goodbye/" itemprop="url">
+                  别了Amazon——一个工程师在Amazon两年的感悟
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-07T08:00:00-05:00">
+                2017-01-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://farm1.staticflickr.com/300/31801384200_64cddfd72d_c.jpg" alt="amazon-logo"></p>
+<p>我于2014年11月3日正式入职Amazon在温哥华的办公司，到2016年12月2日离职，历时整整2年1个月。由于已经有了下一个职业目标，所以我在提出辞职的时候比较轻松。哪知真到了离职的这天，我却赫然发现心中隐约的依依不舍：不但是对优秀的同事，甚至还有对Amazonian(亚马逊人)这个身份。</p>
+<p>我离职前恰逢一件意外发生：一个西雅图Amazon总部的工程师因为被老板放到了PIP中，愤而跳楼了(注：PIP即Performance Improvement Plan，大公司用于开除人的工具)。这让亚马逊的“特别”的企业文化继去年纽约时报的批评之后又一次走上了风口浪尖。也不断朋友问我这是不是我离开亚马逊的原因，对此我的回答很简单：我决定离开的原因是因为我相信下一个机会更适合我。</p>
+<p>抛开企业文化这个有争议的话题不说，亚马逊可以从一个小小的卖书网站成长为全球范围内电商的霸主，技术上在云计算领域也是绝对的第一名，我们不妨来看看它积极地独一无二的一面。于是，我想回顾一下个人在亚马逊学习到的东西和感悟，作为对于过去两年的一个总结。这篇文章并非技术帖，更多是我个人成长更多的非技术领域。</p>
+<h3 id="Ownership-主人翁精神"><a href="#Ownership-主人翁精神" class="headerlink" title="Ownership(主人翁精神)"></a>Ownership(主人翁精神)</h3><p>在江湖上Amazon有著名的<a href="https://www.amazon.jobs/principles" target="_blank" rel="noopener">Leadership Principle</a>，其中Ownership排在第二——仅次于第一名的Customer Obsession(客户至上)。而在公司里赞扬或者批评一个员工也经常以这条为标准。</p>
+<p>然而，我想诠释的这条和大多数人对于主人翁精神的理解比如“你要把公司的事情当做自己的事情”之列的有着非常大的不同。那是公司希望说给员工的。我想说的Onwership，可以简洁的总结成一句话：你要对于你自己职业生涯的付全责。</p>
+<p>我在Amazon的良师益友Desmond同学对于这句话有着一段非常精彩的诠释。大致意思是：我从来不觉得我是给公司在打工，我为我自己工作。当我的目标和公司一致的时候我在公司内用Startup的心态来做事情，当目标不一致的时候再寻求改变。</p>
+<p>因此，如果你有Ownership，你选择一份工作无论是在大公司还是小公司还是自己去创业，其实没有那么大的不同——只要你为你的职业生涯(career)而不是工作(job)而工作。</p>
+<h3 id="Action-Item-行动事项"><a href="#Action-Item-行动事项" class="headerlink" title="Action Item (行动事项)"></a>Action Item (行动事项)</h3><p>江湖上另外一个传言就是Amazon开会不用PPT，而是会议主持人给大家发一个6页纸的文档(6 pages)，大家猛读10分钟后开始会议内容。</p>
+<p>由于我在公司内级别不高，所以虽然以上会议形式常见但是6 pages并不算常见。但让我收益很深的是Amazon开会、讨论的另一个鲜明的特点：Action Items(行动事项)。</p>
+<p>每当开会大家激烈的讨论完一个话题之后，可能会有几个可能的解决方案，也可能会有更多的问题，这个时候会议室里总会有人说出这么一句话：“So what is the action item for this?(所以，关于这件事的行动事项是什么？)”</p>
+<p>在Amazon，无论是开完一个会后的会议记录，还是一个ticket里面的回复，里面都需要明确的列出行动事项。一个会议如果没有行动事项，就等于没开。行动事项不仅仅只是列出要做的事情，更要列出谁来做这件事，此事当前的进展，以及预期完成的时间(ETA)。不仅如此，这份行动事项会在列在一个各方都能看到的文档里实时更新。</p>
+<p>我想，行动事项的方法之所以有效，是因为它是一个非常有效的思维工具，把一个要达成的目标分离成了决策和行动两方面：这迫使我们在决策的时候就要考虑如何把大目标分成一个又一个可执行(actionable)的小目标，又在行动时让我们不再思前想后只需要按照原定计划一条一条执行下局即可。</p>
+<h3 id="吃掉大象：推动项目的能力"><a href="#吃掉大象：推动项目的能力" class="headerlink" title="吃掉大象：推动项目的能力"></a>吃掉大象：推动项目的能力</h3><p>我之前的经理经常挂在嘴边的一句话我很喜欢：</p>
+<blockquote>
+<p>How to eat an elephant? One bite at a time. :D</p>
+<p>怎么吃掉一个大象？一口一口吃咯。</p>
+</blockquote>
+<p>我之所以喜欢这句话，是因为它首先抛出了一个看似很难以完成的问题，然后又给出了既让人吃惊又合情合理的回答。这和项目管理很像：一个无论是多大的项目，只要自顶向下一层一层划分下去，总能找到着手点开始做的。</p>
+<p>具体地说，任何项目A，都可以分成小的子项目A1,A2,A3…，然后这些子项目比如A1又可以分成更小的子项目A11,A12,A13…，如此细分下去我们总可以到达一个层面：在这层的所有子项目都是可执行的(actionable)，于是我们就得到了我们的行动列表了(:D)。</p>
+<p>另一维度就是时间，在Amazon经常提到的一句话是thinking backwards(从后往前考虑)。这句话的意思是，假设我们需要2017年年末上线一个项目，那么12月需要完成什么，11月完成什么，如此这般往前倒推回去到今天。这样一来，行动事项就和项目的规划(schedule)一对一的匹配上了。</p>
+<p>Amazon公司内部由一个工程师来发起和推动一个项目的实例屡见不鲜，有一个小故事是：早期的Amazon首页上并没有商品推荐功能，有一个工程师想推动此事但是不被批准，于是他就偷偷地实现了这个功能并且上线到10%的流量中，最终推荐功能的Amazon页面购买率远高于没有推荐功能的，项目也获得批准。</p>
+<p>现阶段现实生活中的Amazon（或者其他同样档次的大公司），这样的事情几乎不可能发生。而在亚马逊内部，资深的工程师和缺乏经验的的工程师的区别就在于推动项目的能力：但是如果一个工程师提出一个项目，里面清晰地描绘了“如何吃掉一个大象”，那么他的项目获得支持以及获得成功的可能性将大大增强。</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>这篇文章本来在离职当天就想写，结果一拖就拖了这么久。写之前思绪万千，提起笔来挂一漏万。想想还是有些汗颜，觉得对不起起了这么大的一个题目……但想到此文只是作为自己的一个总结，也就释然了。</p>
+<p>文中没有提到一点具体的技术，原因很简单：这个时代技术已经不是秘密，只要有心学习网络上的资料太多了。一个特别推荐的资源是 Werner Vogels的博客<a href="https://www.allthingsdistributed.com" target="_blank" rel="noopener">All Things Distributed</a>，他是Amazon的CTO，里面有一系列文章叫做Back-to-Basics Weekend Reading里面包含了很多数据库以及分布式系统中的经典论文，很有意思。</p>
+<p>最后，祝福我Amazon的朋友们发展得越来越好。我虽然不再是Amazon的员工，但是还会是Amazon的客户的。 :D</p>
+<p><img src="https://farm1.staticflickr.com/771/32058797671_66e63bd957_c.jpg" alt="amazon-last-day"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2017/01/01/2016-year-end/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/01/2016-year-end/" itemprop="url">
+                  2016年终总结
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-01T20:35:01-05:00">
+                2017-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://farm1.staticflickr.com/772/32041825175_5754da83e9_c.jpg" alt="惠斯勒山顶"></p>
+<h3 id="零"><a href="#零" class="headerlink" title="零"></a><center>零</center></h3><p>鉴于我至少最近5年都没有写过年度总结了（也许从来没有写过？），所以这篇年度总结我决定想到哪儿写到哪儿。</p>
+<p>2016年我把冯小刚的贺岁三部曲《甲方乙方》《没完没了》《不见不散》都看了一遍。葛优在《甲方乙方》的结尾悲喜交加的说：“1997年过去了，我很怀念它。”</p>
+<p>不久之后，这句话变成了每年都能重复一次的一个梗。</p>
+<blockquote>
+<p>2016年过去了，我很怀念它。</p>
+</blockquote>
+<h3 id="壹"><a href="#壹" class="headerlink" title="壹"></a><center>壹</center></h3><p>2016年的前半年过得很累。</p>
+<p>2月份被卷入一个无比扯淡的项目，之所以称之为无比扯淡，是因为我接手这个项目的<em>当天</em>，项目理应已经正式上线了。与此同时呢，我们组正在紧锣密鼓的写一个全新的服务替代之前原有的服务，我自己手头那部分又是其中一个核心组件。我深刻体会到了一个词叫做“分身乏术”，解决办法只能是加班——基本上连晚上带周末连加了至少一个月的班吧。</p>
+<p>4月份新服务上线了，各种数据很漂亮，这才松了一口气。</p>
+<h3 id="貳"><a href="#貳" class="headerlink" title="貳"></a><center>貳</center></h3><p>要说起我2016年的年度目标其实还是顺利达成了的——换了一个工作。尽管过程颇为曲折，但是最终还是从Amazon挪到了Google。在可预见的未来并没有再换工作的打算，准备在Google好好待着做好技术。</p>
+<h3 id="叁"><a href="#叁" class="headerlink" title="叁"></a><center>叁</center></h3><p>这段经历留下来最宝贵的部分恐怕还是心理上的。学到了人的四种心理处境：</p>
+<ul>
+<li><strong>victim</strong> (受害者)：自己对于自己的处境没有控制力(in control)，觉得自己变成现在这样都是别人/老天/环境害的，自己没有改变现状的能力。</li>
+<li><strong>fighter</strong> (斗士)：自己对于自己的处境有一定的控制力，心中有斗志与现状作斗争，有一定改变现状的能力。</li>
+<li><strong>controller</strong> (控制者)：自己能够坦然接受自己的处境是个人决策的结果，并且对于现状有着完全的控制力(full control)。</li>
+<li><strong>peaceful</strong> (平静)：完全的心如止水。这是佛陀的境界了……</li>
+</ul>
+<p>绝大多数情况下我自己处于fighter与controller之间的状态，有的时候我都觉得我自己太过于犬儒主义愤世嫉俗了，但是这些情绪让我坚持了下来，也挺好。</p>
+<h3 id="肆"><a href="#肆" class="headerlink" title="肆"></a><center>肆</center></h3><p>从Amazon换到了Google的一个直接后果是：我居住的城市又换了一个。从加拿大的西海岸挪到了东海岸，温哥华到滑铁卢——一个位于多伦多边上的小城。</p>
+<p>我成长于一个小城市。年轻时听许巍唱：“曾梦想仗剑走天涯，看一看世界的繁华。”，非常向往。而我如今真的已经跨越了大半个地球，经历了从+30°C到-30°C的不同城市的转变，心态又不一样了。</p>
+<p>如今的我对于“故乡”这个词有一种非常复杂的情感，而且每每在我不能陪在家人身边的时候这种情感更为强烈。对我来说，这个词有两面，一面是红楼梦里说的“<em>甚荒唐，反认他乡是故乡</em>”，另一面是刘墉书里写的“<em>什么是故乡？故乡不过是我们祖先流浪的最后一站罢了。</em>”</p>
+<h3 id="伍"><a href="#伍" class="headerlink" title="伍"></a><center>伍</center></h3><p>不管愿不愿意承认，一件事实就是：友情是会随着时间和空间而改变的，因此友情是有远近亲疏的。</p>
+<p>2016年我和丽翔最重要的朋友肯定任毅与Payson。我们一起去了无数个地方：温哥华岛上的阳光海岸，维多利亚，西雅图，波特兰，惠斯勒……</p>
+<p>Payson用朋友圈记录了”和易哥易嫂的第1001顿散伙饭“。她还说要用她很有网红潜质的公众号发一篇怀念我们的文章。</p>
+<p>她到现在还没写。我觉得肯定是我们离开温哥华了她太难过。</p>
+<p>其实，我也是。</p>
+<h3 id="陆"><a href="#陆" class="headerlink" title="陆"></a><center>陆</center></h3><p>还有一些友情是不会变的。比如我和毅叔的。</p>
+<p>毅叔创业两年，心理压力自然不小。于是年初那段时间我和他的微信对话就经常像两个中年男人的互相开导。</p>
+<p>我不记得什么时候看过的一段话，大致意思是：男人过了青春期还是更愿意跟同性聊天。我觉得还是相当有道理的。</p>
+<h3 id="柒"><a href="#柒" class="headerlink" title="柒"></a><center>柒</center></h3><p>今年的年度专辑属于李志。不过不是他的最新录音室专辑《在每一条伤心的应天大街上》，而是他的不插电现场专辑《李志北京不插电现场 2016.5.29》。尽管李志的这张录音室专辑制作精良，我第一时间就花了20人民币购买，十分喜爱。但是我还是更偏爱这张不插电，现场中每一个乐手都非常优秀，李志的表现更是非常的“李志现场”：远的近的是声音，浓的淡的是感情。</p>
+<p>当然，过去几年都没有写年度总结，每年的年度专辑只存在于我的想象之中，趁着今天一块儿也都推荐了吧：</p>
+<ul>
+<li>2011：万能青年旅店 同名专辑</li>
+<li>2012：张玮玮和郭龙 《白银饭店》</li>
+<li>2013：宋冬野 《安河桥北》</li>
+<li>2014：电影银河护卫队原声带 《Guardians of the Galaxy》</li>
+<li>2015：陈粒 《如也》</li>
+<li>2016：李志 《李志北京不插电现场 2016.5.29》</li>
+</ul>
+<h3 id="捌"><a href="#捌" class="headerlink" title="捌"></a><center>捌</center></h3><p>2016年最后一天非常想想要重新开始写博客。</p>
+<p>几个原因：</p>
+<p>一，不得不承认我找不出一个更好的说法来表达冯唐那句烂大街的“用文字打败时间”，和文字比起来，其他的记录媒介我能表达的不够多。</p>
+<p>二，看知乎的统计我2016年看了近10万个知乎页面，如果算上微博和微信朋友圈那就更多了。输入太多，输出太少。孔子说：学而不思则罔，思而不学则殆。</p>
+<p>三，我想当一个单纯的写字的人(writer)，书写本身就是一种需要。我需要有一个渠道来完整的、不收任何人约束的来表达我的感受和观点。</p>
+<h3 id="玖"><a href="#玖" class="headerlink" title="玖"></a><center>玖</center></h3><p>2017年的想做的事情很多，以重要性来排列：锻炼身体 &gt; 自己和家人生活得愉快 &gt; 写好代码 &gt; 买房 &gt; ……</p>
+<p>当然，以在Amazon养成的德行，目标太多等于没有目标。如果只树立一个目标的话，那就是2017年用一年时间好好锻炼身体吧。</p>
+<p>2017，请多指教。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg"
+               alt="erain" />
+          <p class="site-author-name" itemprop="name">erain</p>
+          <p class="site-description motion-element" itemprop="description">Skadoosh!</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/erain9/" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erain/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/erain" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/erain/" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>
+                  
+                  Instagram
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">erain</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

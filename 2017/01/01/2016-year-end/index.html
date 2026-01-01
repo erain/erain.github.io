@@ -1,38 +1,723 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!doctype html>
 
 
-{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="声," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="零鉴于我至少最近5年都没有写过年度总结了（也许从来没有写过？），所以这篇年度总结我决定想到哪儿写到哪儿。 2016年我把冯小刚的贺岁三部曲《甲方乙方》《没完没了》《不见不散》都看了一遍。葛优在《甲方乙方》的结尾悲喜交加的说：“1997年过去了，我很怀念它。” 不久之后，这句话变成了每年都能重复一次的一个梗。  2016年过去了，我很怀念它。  壹2016年的前半年过得很累。 2月份被卷入一个无比">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2016年终总结">
+<meta property="og:url" content="http://blog.yiyu.me/2017/01/01/2016-year-end/index.html">
+<meta property="og:site_name" content="不厌其烦">
+<meta property="og:description" content="零鉴于我至少最近5年都没有写过年度总结了（也许从来没有写过？），所以这篇年度总结我决定想到哪儿写到哪儿。 2016年我把冯小刚的贺岁三部曲《甲方乙方》《没完没了》《不见不散》都看了一遍。葛优在《甲方乙方》的结尾悲喜交加的说：“1997年过去了，我很怀念它。” 不久之后，这句话变成了每年都能重复一次的一个梗。  2016年过去了，我很怀念它。  壹2016年的前半年过得很累。 2月份被卷入一个无比">
+<meta property="og:image" content="https://farm1.staticflickr.com/772/32041825175_5754da83e9_c.jpg">
+<meta property="article:published_time" content="2017-01-02T01:35:01.000Z">
+<meta property="article:modified_time" content="2025-11-12T03:11:14.890Z">
+<meta property="article:author" content="erain">
+<meta property="article:tag" content="声">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://farm1.staticflickr.com/772/32041825175_5754da83e9_c.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.yiyu.me/2017/01/01/2016-year-end/"/>
+
+
+
+
+
+  <title> 2016年终总结 | 不厌其烦 </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">不厌其烦</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yiyu.me/2017/01/01/2016-year-end/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                2016年终总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-01T20:35:01-05:00">
+                2017-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://farm1.staticflickr.com/772/32041825175_5754da83e9_c.jpg" alt="惠斯勒山顶"></p>
+<h3 id="零"><a href="#零" class="headerlink" title="零"></a><center>零</center></h3><p>鉴于我至少最近5年都没有写过年度总结了（也许从来没有写过？），所以这篇年度总结我决定想到哪儿写到哪儿。</p>
+<p>2016年我把冯小刚的贺岁三部曲《甲方乙方》《没完没了》《不见不散》都看了一遍。葛优在《甲方乙方》的结尾悲喜交加的说：“1997年过去了，我很怀念它。”</p>
+<p>不久之后，这句话变成了每年都能重复一次的一个梗。</p>
+<blockquote>
+<p>2016年过去了，我很怀念它。</p>
+</blockquote>
+<h3 id="壹"><a href="#壹" class="headerlink" title="壹"></a><center>壹</center></h3><p>2016年的前半年过得很累。</p>
+<p>2月份被卷入一个无比扯淡的项目，之所以称之为无比扯淡，是因为我接手这个项目的<em>当天</em>，项目理应已经正式上线了。与此同时呢，我们组正在紧锣密鼓的写一个全新的服务替代之前原有的服务，我自己手头那部分又是其中一个核心组件。我深刻体会到了一个词叫做“分身乏术”，解决办法只能是加班——基本上连晚上带周末连加了至少一个月的班吧。</p>
+<p>4月份新服务上线了，各种数据很漂亮，这才松了一口气。</p>
+<h3 id="貳"><a href="#貳" class="headerlink" title="貳"></a><center>貳</center></h3><p>要说起我2016年的年度目标其实还是顺利达成了的——换了一个工作。尽管过程颇为曲折，但是最终还是从Amazon挪到了Google。在可预见的未来并没有再换工作的打算，准备在Google好好待着做好技术。</p>
+<h3 id="叁"><a href="#叁" class="headerlink" title="叁"></a><center>叁</center></h3><p>这段经历留下来最宝贵的部分恐怕还是心理上的。学到了人的四种心理处境：</p>
+<ul>
+<li><strong>victim</strong> (受害者)：自己对于自己的处境没有控制力(in control)，觉得自己变成现在这样都是别人/老天/环境害的，自己没有改变现状的能力。</li>
+<li><strong>fighter</strong> (斗士)：自己对于自己的处境有一定的控制力，心中有斗志与现状作斗争，有一定改变现状的能力。</li>
+<li><strong>controller</strong> (控制者)：自己能够坦然接受自己的处境是个人决策的结果，并且对于现状有着完全的控制力(full control)。</li>
+<li><strong>peaceful</strong> (平静)：完全的心如止水。这是佛陀的境界了……</li>
+</ul>
+<p>绝大多数情况下我自己处于fighter与controller之间的状态，有的时候我都觉得我自己太过于犬儒主义愤世嫉俗了，但是这些情绪让我坚持了下来，也挺好。</p>
+<h3 id="肆"><a href="#肆" class="headerlink" title="肆"></a><center>肆</center></h3><p>从Amazon换到了Google的一个直接后果是：我居住的城市又换了一个。从加拿大的西海岸挪到了东海岸，温哥华到滑铁卢——一个位于多伦多边上的小城。</p>
+<p>我成长于一个小城市。年轻时听许巍唱：“曾梦想仗剑走天涯，看一看世界的繁华。”，非常向往。而我如今真的已经跨越了大半个地球，经历了从+30°C到-30°C的不同城市的转变，心态又不一样了。</p>
+<p>如今的我对于“故乡”这个词有一种非常复杂的情感，而且每每在我不能陪在家人身边的时候这种情感更为强烈。对我来说，这个词有两面，一面是红楼梦里说的“<em>甚荒唐，反认他乡是故乡</em>”，另一面是刘墉书里写的“<em>什么是故乡？故乡不过是我们祖先流浪的最后一站罢了。</em>”</p>
+<h3 id="伍"><a href="#伍" class="headerlink" title="伍"></a><center>伍</center></h3><p>不管愿不愿意承认，一件事实就是：友情是会随着时间和空间而改变的，因此友情是有远近亲疏的。</p>
+<p>2016年我和丽翔最重要的朋友肯定任毅与Payson。我们一起去了无数个地方：温哥华岛上的阳光海岸，维多利亚，西雅图，波特兰，惠斯勒……</p>
+<p>Payson用朋友圈记录了”和易哥易嫂的第1001顿散伙饭“。她还说要用她很有网红潜质的公众号发一篇怀念我们的文章。</p>
+<p>她到现在还没写。我觉得肯定是我们离开温哥华了她太难过。</p>
+<p>其实，我也是。</p>
+<h3 id="陆"><a href="#陆" class="headerlink" title="陆"></a><center>陆</center></h3><p>还有一些友情是不会变的。比如我和毅叔的。</p>
+<p>毅叔创业两年，心理压力自然不小。于是年初那段时间我和他的微信对话就经常像两个中年男人的互相开导。</p>
+<p>我不记得什么时候看过的一段话，大致意思是：男人过了青春期还是更愿意跟同性聊天。我觉得还是相当有道理的。</p>
+<h3 id="柒"><a href="#柒" class="headerlink" title="柒"></a><center>柒</center></h3><p>今年的年度专辑属于李志。不过不是他的最新录音室专辑《在每一条伤心的应天大街上》，而是他的不插电现场专辑《李志北京不插电现场 2016.5.29》。尽管李志的这张录音室专辑制作精良，我第一时间就花了20人民币购买，十分喜爱。但是我还是更偏爱这张不插电，现场中每一个乐手都非常优秀，李志的表现更是非常的“李志现场”：远的近的是声音，浓的淡的是感情。</p>
+<p>当然，过去几年都没有写年度总结，每年的年度专辑只存在于我的想象之中，趁着今天一块儿也都推荐了吧：</p>
+<ul>
+<li>2011：万能青年旅店 同名专辑</li>
+<li>2012：张玮玮和郭龙 《白银饭店》</li>
+<li>2013：宋冬野 《安河桥北》</li>
+<li>2014：电影银河护卫队原声带 《Guardians of the Galaxy》</li>
+<li>2015：陈粒 《如也》</li>
+<li>2016：李志 《李志北京不插电现场 2016.5.29》</li>
+</ul>
+<h3 id="捌"><a href="#捌" class="headerlink" title="捌"></a><center>捌</center></h3><p>2016年最后一天非常想想要重新开始写博客。</p>
+<p>几个原因：</p>
+<p>一，不得不承认我找不出一个更好的说法来表达冯唐那句烂大街的“用文字打败时间”，和文字比起来，其他的记录媒介我能表达的不够多。</p>
+<p>二，看知乎的统计我2016年看了近10万个知乎页面，如果算上微博和微信朋友圈那就更多了。输入太多，输出太少。孔子说：学而不思则罔，思而不学则殆。</p>
+<p>三，我想当一个单纯的写字的人(writer)，书写本身就是一种需要。我需要有一个渠道来完整的、不收任何人约束的来表达我的感受和观点。</p>
+<h3 id="玖"><a href="#玖" class="headerlink" title="玖"></a><center>玖</center></h3><p>2017年的想做的事情很多，以重要性来排列：锻炼身体 &gt; 自己和家人生活得愉快 &gt; 写好代码 &gt; 买房 &gt; ……</p>
+<p>当然，以在Amazon养成的德行，目标太多等于没有目标。如果只树立一个目标的话，那就是2017年用一年时间好好锻炼身体吧。</p>
+<p>2017，请多指教。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%A3%B0/" rel="tag"># 声</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/31/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/07/amazon-goodbye/" rel="prev" title="别了Amazon——一个工程师在Amazon两年的感悟">
+                别了Amazon——一个工程师在Amazon两年的感悟 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg"
+               alt="erain" />
+          <p class="site-author-name" itemprop="name">erain</p>
+          <p class="site-description motion-element" itemprop="description">Skadoosh!</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/erain9/" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erain/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/erain" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/erain/" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>
+                  
+                  Instagram
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#零"><span class="nav-number">1.</span> <span class="nav-text">零</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#壹"><span class="nav-number">2.</span> <span class="nav-text">壹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#貳"><span class="nav-number">3.</span> <span class="nav-text">貳</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#叁"><span class="nav-number">4.</span> <span class="nav-text">叁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#肆"><span class="nav-number">5.</span> <span class="nav-text">肆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伍"><span class="nav-number">6.</span> <span class="nav-text">伍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#陆"><span class="nav-number">7.</span> <span class="nav-text">陆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#柒"><span class="nav-number">8.</span> <span class="nav-text">柒</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#捌"><span class="nav-number">9.</span> <span class="nav-text">捌</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#玖"><span class="nav-number">10.</span> <span class="nav-text">玖</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">erain</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
