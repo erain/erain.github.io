@@ -77,6 +77,7 @@
 
 
 
+
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
@@ -90,6 +91,7 @@
 <meta property="og:url" content="https://blog.yiyu.me/index.html">
 <meta property="og:site_name" content="不厌其烦">
 <meta property="og:description" content="Skadoosh!">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="erain">
 <meta name="twitter:card" content="summary">
 
@@ -126,7 +128,7 @@
 
 
   <title> 不厌其烦 </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -325,19 +327,24 @@
 <p>所以这次把workflow整理了一下。目标很简单：我只管写和编辑Markdown，剩下的事情交给GitHub Actions。</p>
 <h3 id="写作、发布"><a href="#写作、发布" class="headerlink" title="写作、发布"></a>写作、发布</h3><p>所有需要编辑的东西现在都在<code>src-blog-yiyu-me</code>这个私有仓库里，包括文章、主题、配置和自动发布流程。</p>
 <p>最简单的写法，甚至不需要在本地安装Hexo：直接在GitHub网页上打开这个仓库，在<code>source/_posts/</code>下面新建一个Markdown文件。例如<code>my-new-post.md</code>：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 我的新文章</span><br><span class="line">date: 2026-10-24 09:00:00</span><br><span class="line">tags: 随笔</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">正文从这里开始。</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 我的新文章</span><br><span class="line">date: 2026-10-24 09:00:00</span><br><span class="line"><span class="section">tags: 随笔</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">正文从这里开始。</span><br></pre></td></tr></table></figure>
+
 <p>提交到<code>master</code>，就会自动发布。修改旧文章也是一样：编辑对应的Markdown文件，再提交一次。</p>
 <p>如果习惯在本地写，只需要clone这一个repo：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/erain/src-blog-yiyu-me.git</span><br><span class="line"><span class="built_in">cd</span> src-blog-yiyu-me</span><br></pre></td></tr></table></figure>
+
 <p>这是私有仓库，clone时需要使用有访问权限的GitHub账号。写好之后：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add <span class="built_in">source</span>/_posts/my-new-post.md</span><br><span class="line">git commit -m <span class="string">"Add a new blog post"</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add <span class="built_in">source</span>/_posts/my-new-post.md</span><br><span class="line">git commit -m <span class="string">&quot;Add a new blog post&quot;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
 <p>这里用<code>git add</code>，是因为新建的文件也要加进版本控制。剩下的安装依赖、生成网站、发布，都不需要在本地做。</p>
 <p>文章链接依然按照日期和文件名生成。比如上面的例子，对应的是<code>/2026/10/24/my-new-post/</code>。修改旧文章时保留文件名和<code>date</code>，原来的链接就不会变。暂时不想发布的文章放在<code>source/_drafts/</code>；当前配置不会生成这些草稿。文章日期本身不是定时发布开关。</p>
 <h3 id="如果想先预览"><a href="#如果想先预览" class="headerlink" title="如果想先预览"></a>如果想先预览</h3><p>本地预览是可选的。需要的时候，安装Node.js 24，然后在仓库目录运行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用nvm管理Node.js的话，先读取仓库里的版本配置</span></span><br><span class="line">nvm use</span><br><span class="line">npm ci</span><br><span class="line">npm run server</span><br></pre></td></tr></table></figure>
-<p>打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，就能看到本地博客。没有使用nvm的话，直接安装对应版本的Node.js即可。</p>
+
+<p>打开<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a>，就能看到本地博客。没有使用nvm的话，直接安装对应版本的Node.js即可。</p>
 <p>也可以让Hexo帮忙创建文章：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run new -- <span class="string">"my-new-post"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run new -- <span class="string">&quot;my-new-post&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>发布前想检查完整构建，可以运行<code>npm run build</code>。它会执行<code>hexo clean</code>和<code>hexo generate</code>，把网站生成到<code>public/</code>。这个目录不需要提交，GitHub Actions会自己生成一份。</p>
 <h3 id="背后是怎么工作的"><a href="#背后是怎么工作的" class="headerlink" title="背后是怎么工作的"></a>背后是怎么工作的</h3><p>编辑的入口只有一个仓库，但背后仍然保留两个仓库的分工：</p>
 <table>
@@ -348,8 +355,7 @@
 <th>谁来更新</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>src-blog-yiyu-me</code>，私有</td>
 <td>Markdown、主题、Hexo配置、Actions配置</td>
 <td>我</td>
@@ -359,19 +365,19 @@
 <td>生成好的HTML、CSS、JavaScript等静态文件</td>
 <td>GitHub Actions</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>主题现在直接放在源码仓库的<code>themes/next/</code>里面。要改主题，就和改文章一样，在这个仓库修改、提交。原来单独的主题仓库和submodule都不再是日常流程的一部分。</p>
 <p>网站继续由原来的GitHub Pages托管，域名还是<code>blog.yiyu.me</code>。这次主要是把手工操作自动化，没有换博客引擎，也没有换托管方式。</p>
 <p>整个流程可以画成这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">编辑Markdown、提交到源码仓库的master</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Actions：build</span><br><span class="line">  Node.js 24 + npm ci</span><br><span class="line">  Hexo + NexT -&gt; public&#x2F;</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">上传构建产物blog-public</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Actions：deploy</span><br><span class="line">  下载同一份产物</span><br><span class="line">  同步到erain.github.io的master</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Pages构建与部署</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">https:&#x2F;&#x2F;blog.yiyu.me</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">编辑Markdown、提交到源码仓库的master</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Actions：build</span><br><span class="line">  Node.js 24 + npm ci</span><br><span class="line">  Hexo + NexT -&gt; public/</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">上传构建产物blog-public</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Actions：deploy</span><br><span class="line">  下载同一份产物</span><br><span class="line">  同步到erain.github.io的master</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Pages构建与部署</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">https://blog.yiyu.me</span><br></pre></td></tr></table></figure>
+
 <p>流程定义在源码仓库的<code>.github/workflows/blog.yml</code>里，分成<code>build</code>和<code>deploy</code>两个job。</p>
 <p><code>build</code>先取出源码，根据<code>.nvmrc</code>选择Node.js版本，再用<code>npm ci</code>按照<code>package-lock.json</code>安装依赖。这样不用依赖我电脑上碰巧装了什么。接下来执行完整构建，检查首页存在、<code>CNAME</code>里的域名正确，再把<code>public/</code>上传成一个名为<code>blog-public</code>的artifact，也就是这次构建的产物。</p>
 <p><code>deploy</code>必须等<code>build</code>成功后才能运行。它下载刚才生成的那份产物，把文件同步到发布仓库，提交并推送。同步时会删除已经不再生成的旧文件，保留发布仓库的Git记录；如果网站内容没有变化，就不产生新的提交。</p>
 <p>最后，发布仓库的更新会触发GitHub Pages自己的构建和部署。源码仓库的Action成功，表示网站文件已经推送过去；还要等Pages部署成功，线上才算更新完成。</p>
 <p><code>source/CNAME</code>会随构建一起进入网站，继续使用原来的域名。发布时还会加上<code>.nojekyll</code>，让Pages直接提供Hexo已经生成好的静态文件。</p>
 <h3 id="两个仓库之间的钥匙"><a href="#两个仓库之间的钥匙" class="headerlink" title="两个仓库之间的钥匙"></a>两个仓库之间的钥匙</h3><p>源码仓库的Action需要写入另一个仓库，因此单独配了一把SSH deploy key。公钥放在<code>erain.github.io</code>的Deploy keys里并允许写入，私钥放在源码仓库的Actions secret中，名字是<code>BLOG_DEPLOY_KEY</code>。</p>
-<p>这把钥匙只对应发布仓库，不需要把我日常使用的个人SSH私钥交给Action。它是一次性配置，平时写文章不用碰。GitHub官方的<a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys" target="_blank" rel="noopener">deploy key文档</a>解释了这种仓库级授权方式。</p>
+<p>这把钥匙只对应发布仓库，不需要把我日常使用的个人SSH私钥交给Action。它是一次性配置，平时写文章不用碰。GitHub官方的<a target="_blank" rel="noopener" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys">deploy key文档</a>解释了这种仓库级授权方式。</p>
 <p>私有的是源码仓库，生成出来的网站仍然是公开的。写进正式文章的内容会发布到网上，这一点和以前一样。</p>
 <h3 id="怎么知道发布成功了"><a href="#怎么知道发布成功了" class="headerlink" title="怎么知道发布成功了"></a>怎么知道发布成功了</h3><p>提交之后，先去源码仓库的Actions页面，看<code>Build and publish blog</code>这次运行是否成功。正常情况下，<code>build</code>和<code>deploy</code>都应该是绿色。</p>
 <p>然后去<code>erain.github.io</code>的Actions页面，确认对应的<code>pages-build-deployment</code>也成功，最后打开文章的正式链接，检查标题、日期、正文、代码块，以及首页和归档里的入口。</p>
@@ -805,12 +811,12 @@
 <p>所以，在我2004年离开家门去上大学以后，在2020年又一次与父母生活在了一起一整年。只不过这次从三口之家变成了四口之家，各自的身份角色也发生了变化——父母终于不再是“家长”，而只是“父母”。两代人住在一起总会有习惯和理念的不同，但能借着这样一个奇怪的机会长时间陪伴彼此总是一件值得感恩的事情。在秋天的时候，加拿大疫情稍缓，我们会每周随机找一个附近的城市开车过去，准备吃的喝的，找一些人少的地方逛上一整天，其乐融融。</p>
 <p>对生活的其它方面，“隔离”其实并不使我太难受。我在大学期间在南宁和北京都分别住院过一次，而回想起来住院的那段时间都是我觉得最平静的时候。这次因为疫情的隔离虽然不一样，但也有类似的地方，希望多年后想起来的感受也是同样是平静。</p>
 <h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a><center>工作</center></h3><p>2020年是我在Google工作的第四年，也是我开始工作后的第十年。如我之前所说，Google是我到目前为止唯一一家在工作一年之后完全没有“是不是该换家公司啦”感觉的公司，也是第一家让我觉得“在这里干到退休也不错”的公司。</p>
-<p>今年的工作出乎意外的顺利，也出乎意外的忙，当然这两者之间也许有因果关系。工作内容还是在Kubernetes这个我最喜欢的技术领域，只不过侧重点从之前的Multi-Tenancy（多租户）转到了Observability（可观测性）以及Multi-/Hybrid-Cloud（多云托管/混合云）。因为Multi-/Hybrid-Cloud是云计算的新形态，因此Observability的问题就变成了格外突出；另一方面Observability是一个相对较“软”的技术方向，所以如何在技术上给自己和团队找到一些有挑战、有影响力、成体系的项目就变得格外重要。</p>
+<p>今年的工作出乎意外的顺利，也出乎意外的忙，当然这两者之间也许有因果关系。工作内容还是在Kubernetes这个我最喜欢的技术领域，只不过侧重点从之前的Multi-Tenancy（多租户）转到了Observability（可观测性）以及Multi-&#x2F;Hybrid-Cloud（多云托管&#x2F;混合云）。因为Multi-&#x2F;Hybrid-Cloud是云计算的新形态，因此Observability的问题就变成了格外突出；另一方面Observability是一个相对较“软”的技术方向，所以如何在技术上给自己和团队找到一些有挑战、有影响力、成体系的项目就变得格外重要。</p>
 <p>工作方法上，我越来越体会到Opinionated的好处。Opinionated中文并不好翻译，通常译作“自以为是的”，实际的意思是“有强烈倾向性意见的”。这是因为，在很多时候做决策的时候并没有最优解——不光自己没有最优解，别的甚至是高级别的人也不会有最优解，所以就会出现几个高级别的人彼此之间给出的决策建议是相反的情况。自己作为决策的实际执行者其实是最了解问题细节的人，只有自己Opinionated并且敢于做决策，才有最大的概率把决策作对。反过来，A Wrong Decision Is Better Than Indecision（错误的决定优于没有决定），“快速试错”也是产品迭代以及自身成长的好方法之一。</p>
 <p>本来想在入职纪念日那天写一篇博客“Google四年”，结果拖延症一下子就到了现在。让我们拭目以待那篇博客会出现还是会变成“Google五年”。:smile:</p>
 <h3 id="艺术家"><a href="#艺术家" class="headerlink" title="艺术家"></a><center>艺术家</center></h3><p>这一节的标题是“艺术家”，其实是今年我对自身定位的目标——所谓艺术家，是审视自身的独特性并且重视内容输出的人。我想更多的输出内容。</p>
 <p>缘起是有一次看到小唐老师在群里闲聊的时候说“我觉得这世界上没有第二个人能和我一样弹吉他”，心里非常羡慕。那句话的意思当然不是小唐是世界第一吉他手——虽然小唐弹得也非常好——那句话的意思是他在“弹吉他”这个事情上的自身的独特性。我又想起了自己在各种社交网络的影响下，变得越来越习惯消费碎片内容而非输出内容。消费碎片只会让自身变成碎片，人生只有几十年，我不想变成碎片，我想变成一个哪怕微不足道但独特的“我”。</p>
-<p>今年开启了两个视频内容项目。一个是<a href="https://weibo.com/u/1082251714?tabtype=video&amp;layerid=4587816065964701" target="_blank" rel="noopener">#程序员问程序员</a>系列，这是一个程序员的访谈节目。它起源于我在每天工作中要开大量的视频会议，于是我就想着找一些不算熟悉的程序员小伙伴能够进行线上闲聊。我是一个特别爱说话的人，在做节目的过程中要让自己学会更多的听人说话，这是一个意想不到的事情。另一个是更私人的<a href="https://weibo.com/u/1082251714?tabtype=video&amp;layerid=4588367250988274" target="_blank" rel="noopener">#同一首歌</a>系列，主要分享我一些音乐视频，自己作为一个吉他手和歌手，哪怕是三流的，也要有自己的声音吧。</p>
+<p>今年开启了两个视频内容项目。一个是<a target="_blank" rel="noopener" href="https://weibo.com/u/1082251714?tabtype=video&layerid=4587816065964701">#程序员问程序员</a>系列，这是一个程序员的访谈节目。它起源于我在每天工作中要开大量的视频会议，于是我就想着找一些不算熟悉的程序员小伙伴能够进行线上闲聊。我是一个特别爱说话的人，在做节目的过程中要让自己学会更多的听人说话，这是一个意想不到的事情。另一个是更私人的<a target="_blank" rel="noopener" href="https://weibo.com/u/1082251714?tabtype=video&layerid=4588367250988274">#同一首歌</a>系列，主要分享我一些音乐视频，自己作为一个吉他手和歌手，哪怕是三流的，也要有自己的声音吧。</p>
 <h3 id="愿望"><a href="#愿望" class="headerlink" title="愿望"></a><center>愿望</center></h3><p>如果2020年是人的话，它肯定过得很委屈：“为什么都在赶我走？”事实上，日历上的时间从2020年12月31日变成2021年1月1日，世界仍然按照它固有的节奏运转——疫情依然严重，居家隔离不知道还要维持多久…</p>
 <p>所以，我的2021新年愿望是：希望在2021年能离开家门，不用任何担心地坐一次飞机去某个地方吧。这个新年愿望换句话说就是：世界和平。</p>
 <p><img src="https://storage.googleapis.com/11-technology-static/2020-year-end-3.jpg" alt="2020 Year End"></p>
@@ -1064,6 +1070,7 @@
         
           
             <p><img src="https://storage.googleapis.com/11-technology-static/withlifejou.jpg" alt="旅行团乐队的孔一蝉和我" style="zoom:50%;" /></p>
+
 <center>1</center>
 
 <p>你没看错，上面的图片就是旅行团乐队主唱孔一蝉在帮我弹吉他！</p>
@@ -1354,24 +1361,26 @@
       
         
           
-            <p>因为不想要有多个不同的开发环境，所以这么多年我的主力开发环境一直是Mac。但是有很多情况下又必须使用Linux，比如一些Linux Only的软件的开发比如<a href="https://github.com/containerd/containerd" target="_blank" rel="noopener">Containerd</a>，或者需要搭建一个K8s集群。VMWare虚拟机在这种情况下就是很方便的选择，这篇博客就记录一下一些常用的VMWare虚拟机设置。假定Host是macOS，VMWare版本是VMWare Fusion Pro。</p>
+            <p>因为不想要有多个不同的开发环境，所以这么多年我的主力开发环境一直是Mac。但是有很多情况下又必须使用Linux，比如一些Linux Only的软件的开发比如<a target="_blank" rel="noopener" href="https://github.com/containerd/containerd">Containerd</a>，或者需要搭建一个K8s集群。VMWare虚拟机在这种情况下就是很方便的选择，这篇博客就记录一下一些常用的VMWare虚拟机设置。假定Host是macOS，VMWare版本是VMWare Fusion Pro。</p>
 <h3 id="静态IP设置"><a href="#静态IP设置" class="headerlink" title="静态IP设置"></a>静态IP设置</h3><p>VMWare默认是通过DHCP动态分配IP，这就造成了假设如果我们想要假设一个K8s集群，Master和Nodes没办法得到一个固定的IP进行通信。</p>
-<p>想要设定固定IP也很容易，只要修改一个虚拟网卡的DHCP设置就行了。这个方法来源于<a href="https://willwarren.com/2015/04/02/set-static-ip-address-in-vmware-fusion-7/" target="_blank" rel="noopener">Set a Static IP Address in VMware Fusion 7</a></p>
+<p>想要设定固定IP也很容易，只要修改一个虚拟网卡的DHCP设置就行了。这个方法来源于<a target="_blank" rel="noopener" href="https://willwarren.com/2015/04/02/set-static-ip-address-in-vmware-fusion-7/">Set a Static IP Address in VMware Fusion 7</a></p>
 <p>首先获得一个虚拟机网卡的MAC地址，如下图所示：</p>
 <p><img src="https://willwarren.com/images/2015/04/Screenshot%202015-04-03%2010.55.45.png" alt="VMWare-VM-Mac-Address"></p>
 <p>然后，在VMWare的默认<code>vmnet8</code>网卡的DHCP设置里增加针对这个MAC地址的静态IP设置。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> /Library/Preferences/VMware Fusion/vmnet8/dhcpd.conf</span></span><br><span class="line"></span><br><span class="line">host vm0 &#123;</span><br><span class="line">	hardware ethernet 00:0C:29:72:88:46;</span><br><span class="line">	fixed-address  172.16.76.130;  				# IPs available are 172.16.76.128~254</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">/Library/Preferences/VMware Fusion/vmnet8/dhcpd.conf</span></span><br><span class="line"></span><br><span class="line">host vm0 &#123;</span><br><span class="line">	hardware ethernet 00:0C:29:72:88:46;</span><br><span class="line">	fixed-address  172.16.76.130;  				# IPs available are 172.16.76.128~254</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>重启虚拟机和VMWare即可。</p>
 <h3 id="Linux与Host共享目录"><a href="#Linux与Host共享目录" class="headerlink" title="Linux与Host共享目录"></a>Linux与Host共享目录</h3><p>如果是有图形界面的Linux，装上VMWare Tools之后就可以看到贡献的目录了。</p>
 <p>对于没有图形界面的Linux：</p>
 <ol>
-<li><a href="https://docs.vmware.com/en/VMware-Workstation-Pro/15.0/com.vmware.ws.using.doc/GUID-08BB9465-D40A-4E16-9E15-8C016CC8166F.html" target="_blank" rel="noopener">命令行安装VMWare Tools</a>。</li>
+<li><p style="margin:0"><a target="_blank" rel="noopener" href="https://docs.vmware.com/en/VMware-Workstation-Pro/15.0/com.vmware.ws.using.doc/GUID-08BB9465-D40A-4E16-9E15-8C016CC8166F.html">命令行安装VMWare Tools</a>。</p></li>
 <li><p>在VMWare中共享目录<br><img src="https://storage.googleapis.com/11-technology-static/Screen%20Shot%202019-03-31%20at%208.56.44%20AM.png" alt="vmware-fusion-share-folder"></p>
 </li>
 <li><p>在<code>/etc/fstab</code>中增加相应的mount point:</p>
 </li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.host:/src /home/yiyu/go/src fuse.vmhgfs-fuse allow_other,uid=1000,gid=1000,auto_unmount,defaults 0 0</span><br></pre></td></tr></table></figure>
+
 
           
         
@@ -1611,18 +1620,23 @@
       
         
           
-            <p>定下了2018年的新年愿望为“多写博客”后，上一次更新还是一年以前…连<a href="https://hexo.io" target="_blank" rel="noopener">hexo</a>如何使用都已经忘了。幸好之前的设置代码都还保存在Bitbucket里面，花了一点时间才把才把博客在本地架起来。</p>
+            <p>定下了2018年的新年愿望为“多写博客”后，上一次更新还是一年以前…连<a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a>如何使用都已经忘了。幸好之前的设置代码都还保存在Bitbucket里面，花了一点时间才把才把博客在本地架起来。</p>
 <p>这篇博客记录了这个<code>hexo-based</code>博客的workflow。</p>
-<h3 id="安装hexo，同步repo"><a href="#安装hexo，同步repo" class="headerlink" title="安装hexo，同步repo"></a>安装hexo，同步repo</h3><p>安装Hexo的方法很简单，首先要保证系统中安装了<a href="https://www.npmjs.com" target="_blank" rel="noopener">npm</a>。然后：</p>
+<h3 id="安装hexo，同步repo"><a href="#安装hexo，同步repo" class="headerlink" title="安装hexo，同步repo"></a>安装hexo，同步repo</h3><p>安装Hexo的方法很简单，首先要保证系统中安装了<a target="_blank" rel="noopener" href="https://www.npmjs.com/">npm</a>。然后：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<p>我用的是theme是修改过的<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">next</a>。如果需要修改：</p>
+
+<p>我用的是theme是修改过的<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">next</a>。如果需要修改：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@bitbucket.org:erain/hexo-theme-next-erain.git</span><br></pre></td></tr></table></figure>
-<p>博客代码中已经把theme加成了<a href="https://github.com/blog/2104-working-with-submodules" target="_blank" rel="noopener">git submodule</a>。因此，如果不需要修改theme的时候，只需要：</p>
+
+<p>博客代码中已经把theme加成了<a target="_blank" rel="noopener" href="https://github.com/blog/2104-working-with-submodules">git submodule</a>。因此，如果不需要修改theme的时候，只需要：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@bitbucket.org:erain/src-blog-yiyu-me.git</span><br><span class="line"><span class="built_in">cd</span> src-blog-yiyu-me</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
 <h3 id="写作、部署"><a href="#写作、部署" class="headerlink" title="写作、部署"></a>写作、部署</h3><p>要写一篇新博客、预览</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new new-blog-name</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
 <p>发布新的博客</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br><span class="line"># also commit in the blog source</span><br><span class="line">git commit -am &quot;add a new blog&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br><span class="line"># also commit in the blog source</span><br><span class="line">git commit -am &quot;add a new blog&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
 
           
         
@@ -1797,12 +1811,12 @@
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 强力驱动
+  由 <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
 </div>
@@ -1830,15 +1844,6 @@
 
 
 
-
-
-
-
-
-  
-
-
-
   
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
@@ -1853,6 +1858,8 @@
 
   
   <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
