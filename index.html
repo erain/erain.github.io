@@ -240,6 +240,182 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://blog.yiyu.me/2026/10/24/blog-work-flow-2026/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="erain">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="不厌其烦">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2026/10/24/blog-work-flow-2026/" itemprop="url">
+                  Hexo博客Workflow，2026版
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2026-10-24T08:00:00+00:00">
+                2026-10-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>2018年写过一篇<a href="/2018/01/28/blog-work-flow/">Hexo博客Workflow</a>，记录了怎么把这个博客在本地架起来，再把文章发布出去。</p>
+<p>八年过去，博客还是Hexo，主题还是自己改过的NexT。写博客之前要回忆的命令，却还是有点多：源码在一个repo，主题在另一个repo，要同步submodule，要装依赖，最后还要记得部署和提交源码。这些事单独看都不复杂，但隔很久才写一篇的时候，每一步都得重新想一遍。</p>
+<p>所以这次把workflow整理了一下。目标很简单：我只管写和编辑Markdown，剩下的事情交给GitHub Actions。</p>
+<h3 id="写作、发布"><a href="#写作、发布" class="headerlink" title="写作、发布"></a>写作、发布</h3><p>所有需要编辑的东西现在都在<code>src-blog-yiyu-me</code>这个私有仓库里，包括文章、主题、配置和自动发布流程。</p>
+<p>最简单的写法，甚至不需要在本地安装Hexo：直接在GitHub网页上打开这个仓库，在<code>source/_posts/</code>下面新建一个Markdown文件。例如<code>my-new-post.md</code>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 我的新文章</span><br><span class="line">date: 2026-10-24 09:00:00</span><br><span class="line">tags: 随笔</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">正文从这里开始。</span><br></pre></td></tr></table></figure>
+<p>提交到<code>master</code>，就会自动发布。修改旧文章也是一样：编辑对应的Markdown文件，再提交一次。</p>
+<p>如果习惯在本地写，只需要clone这一个repo：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/erain/src-blog-yiyu-me.git</span><br><span class="line"><span class="built_in">cd</span> src-blog-yiyu-me</span><br></pre></td></tr></table></figure>
+<p>这是私有仓库，clone时需要使用有访问权限的GitHub账号。写好之后：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add <span class="built_in">source</span>/_posts/my-new-post.md</span><br><span class="line">git commit -m <span class="string">"Add a new blog post"</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>这里用<code>git add</code>，是因为新建的文件也要加进版本控制。剩下的安装依赖、生成网站、发布，都不需要在本地做。</p>
+<p>文章链接依然按照日期和文件名生成。比如上面的例子，对应的是<code>/2026/10/24/my-new-post/</code>。修改旧文章时保留文件名和<code>date</code>，原来的链接就不会变。暂时不想发布的文章放在<code>source/_drafts/</code>；当前配置不会生成这些草稿。文章日期本身不是定时发布开关。</p>
+<h3 id="如果想先预览"><a href="#如果想先预览" class="headerlink" title="如果想先预览"></a>如果想先预览</h3><p>本地预览是可选的。需要的时候，安装Node.js 24，然后在仓库目录运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用nvm管理Node.js的话，先读取仓库里的版本配置</span></span><br><span class="line">nvm use</span><br><span class="line">npm ci</span><br><span class="line">npm run server</span><br></pre></td></tr></table></figure>
+<p>打开<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，就能看到本地博客。没有使用nvm的话，直接安装对应版本的Node.js即可。</p>
+<p>也可以让Hexo帮忙创建文章：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run new -- <span class="string">"my-new-post"</span></span><br></pre></td></tr></table></figure>
+<p>发布前想检查完整构建，可以运行<code>npm run build</code>。它会执行<code>hexo clean</code>和<code>hexo generate</code>，把网站生成到<code>public/</code>。这个目录不需要提交，GitHub Actions会自己生成一份。</p>
+<h3 id="背后是怎么工作的"><a href="#背后是怎么工作的" class="headerlink" title="背后是怎么工作的"></a>背后是怎么工作的</h3><p>编辑的入口只有一个仓库，但背后仍然保留两个仓库的分工：</p>
+<table>
+<thead>
+<tr>
+<th>仓库</th>
+<th>保存什么</th>
+<th>谁来更新</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src-blog-yiyu-me</code>，私有</td>
+<td>Markdown、主题、Hexo配置、Actions配置</td>
+<td>我</td>
+</tr>
+<tr>
+<td><code>erain.github.io</code>，公开</td>
+<td>生成好的HTML、CSS、JavaScript等静态文件</td>
+<td>GitHub Actions</td>
+</tr>
+</tbody>
+</table>
+<p>主题现在直接放在源码仓库的<code>themes/next/</code>里面。要改主题，就和改文章一样，在这个仓库修改、提交。原来单独的主题仓库和submodule都不再是日常流程的一部分。</p>
+<p>网站继续由原来的GitHub Pages托管，域名还是<code>blog.yiyu.me</code>。这次主要是把手工操作自动化，没有换博客引擎，也没有换托管方式。</p>
+<p>整个流程可以画成这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">编辑Markdown、提交到源码仓库的master</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Actions：build</span><br><span class="line">  Node.js 24 + npm ci</span><br><span class="line">  Hexo + NexT -&gt; public&#x2F;</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">上传构建产物blog-public</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Actions：deploy</span><br><span class="line">  下载同一份产物</span><br><span class="line">  同步到erain.github.io的master</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Pages构建与部署</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">https:&#x2F;&#x2F;blog.yiyu.me</span><br></pre></td></tr></table></figure>
+<p>流程定义在源码仓库的<code>.github/workflows/blog.yml</code>里，分成<code>build</code>和<code>deploy</code>两个job。</p>
+<p><code>build</code>先取出源码，根据<code>.nvmrc</code>选择Node.js版本，再用<code>npm ci</code>按照<code>package-lock.json</code>安装依赖。这样不用依赖我电脑上碰巧装了什么。接下来执行完整构建，检查首页存在、<code>CNAME</code>里的域名正确，再把<code>public/</code>上传成一个名为<code>blog-public</code>的artifact，也就是这次构建的产物。</p>
+<p><code>deploy</code>必须等<code>build</code>成功后才能运行。它下载刚才生成的那份产物，把文件同步到发布仓库，提交并推送。同步时会删除已经不再生成的旧文件，保留发布仓库的Git记录；如果网站内容没有变化，就不产生新的提交。</p>
+<p>最后，发布仓库的更新会触发GitHub Pages自己的构建和部署。源码仓库的Action成功，表示网站文件已经推送过去；还要等Pages部署成功，线上才算更新完成。</p>
+<p><code>source/CNAME</code>会随构建一起进入网站，继续使用原来的域名。发布时还会加上<code>.nojekyll</code>，让Pages直接提供Hexo已经生成好的静态文件。</p>
+<h3 id="两个仓库之间的钥匙"><a href="#两个仓库之间的钥匙" class="headerlink" title="两个仓库之间的钥匙"></a>两个仓库之间的钥匙</h3><p>源码仓库的Action需要写入另一个仓库，因此单独配了一把SSH deploy key。公钥放在<code>erain.github.io</code>的Deploy keys里并允许写入，私钥放在源码仓库的Actions secret中，名字是<code>BLOG_DEPLOY_KEY</code>。</p>
+<p>这把钥匙只对应发布仓库，不需要把我日常使用的个人SSH私钥交给Action。它是一次性配置，平时写文章不用碰。GitHub官方的<a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys" target="_blank" rel="noopener">deploy key文档</a>解释了这种仓库级授权方式。</p>
+<p>私有的是源码仓库，生成出来的网站仍然是公开的。写进正式文章的内容会发布到网上，这一点和以前一样。</p>
+<h3 id="怎么知道发布成功了"><a href="#怎么知道发布成功了" class="headerlink" title="怎么知道发布成功了"></a>怎么知道发布成功了</h3><p>提交之后，先去源码仓库的Actions页面，看<code>Build and publish blog</code>这次运行是否成功。正常情况下，<code>build</code>和<code>deploy</code>都应该是绿色。</p>
+<p>然后去<code>erain.github.io</code>的Actions页面，确认对应的<code>pages-build-deployment</code>也成功，最后打开文章的正式链接，检查标题、日期、正文、代码块，以及首页和归档里的入口。</p>
+<p>如果<code>build</code>失败，先看构建日志，后面的发布不会执行，线上仍然保留之前的版本。如果<code>deploy</code>失败，检查发布日志和deploy key配置。如果两个job都成功、网页却没有更新，就继续看发布仓库的Pages任务，而不是只盯着源码仓库的绿色勾。</p>
+<p>修正问题后再次提交，就会重新跑整个流程。也可以在源码仓库Actions页面选中这个workflow，用<code>Run workflow</code>手动重新发布<code>master</code>。Pull Request也会检查构建，但不会部署；合并到<code>master</code>后才正式发布。</p>
+<p>八年前记下了怎么手动部署，八年后终于把部署这件事交给了机器。希望下次打开这个repo，是因为有东西想写。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="https://blog.yiyu.me/2025/12/31/2025-year-end/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1476,151 +1652,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://blog.yiyu.me/2017/01/07/amazon-goodbye/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="erain">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="不厌其烦">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="不厌其烦" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/07/amazon-goodbye/" itemprop="url">
-                  别了Amazon——一个工程师在Amazon两年的感悟
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-07T08:00:00+00:00">
-                2017-01-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="https://farm1.staticflickr.com/300/31801384200_64cddfd72d_c.jpg" alt="amazon-logo"></p>
-<p>我于2014年11月3日正式入职Amazon在温哥华的办公司，到2016年12月2日离职，历时整整2年1个月。由于已经有了下一个职业目标，所以我在提出辞职的时候比较轻松。哪知真到了离职的这天，我却赫然发现心中隐约的依依不舍：不但是对优秀的同事，甚至还有对Amazonian(亚马逊人)这个身份。</p>
-<p>我离职前恰逢一件意外发生：一个西雅图Amazon总部的工程师因为被老板放到了PIP中，愤而跳楼了(注：PIP即Performance Improvement Plan，大公司用于开除人的工具)。这让亚马逊的“特别”的企业文化继去年纽约时报的批评之后又一次走上了风口浪尖。也不断朋友问我这是不是我离开亚马逊的原因，对此我的回答很简单：我决定离开的原因是因为我相信下一个机会更适合我。</p>
-<p>抛开企业文化这个有争议的话题不说，亚马逊可以从一个小小的卖书网站成长为全球范围内电商的霸主，技术上在云计算领域也是绝对的第一名，我们不妨来看看它积极地独一无二的一面。于是，我想回顾一下个人在亚马逊学习到的东西和感悟，作为对于过去两年的一个总结。这篇文章并非技术帖，更多是我个人成长更多的非技术领域。</p>
-<h3 id="Ownership-主人翁精神"><a href="#Ownership-主人翁精神" class="headerlink" title="Ownership(主人翁精神)"></a>Ownership(主人翁精神)</h3><p>在江湖上Amazon有著名的<a href="https://www.amazon.jobs/principles" target="_blank" rel="noopener">Leadership Principle</a>，其中Ownership排在第二——仅次于第一名的Customer Obsession(客户至上)。而在公司里赞扬或者批评一个员工也经常以这条为标准。</p>
-<p>然而，我想诠释的这条和大多数人对于主人翁精神的理解比如“你要把公司的事情当做自己的事情”之列的有着非常大的不同。那是公司希望说给员工的。我想说的Onwership，可以简洁的总结成一句话：你要对于你自己职业生涯的付全责。</p>
-<p>我在Amazon的良师益友Desmond同学对于这句话有着一段非常精彩的诠释。大致意思是：我从来不觉得我是给公司在打工，我为我自己工作。当我的目标和公司一致的时候我在公司内用Startup的心态来做事情，当目标不一致的时候再寻求改变。</p>
-<p>因此，如果你有Ownership，你选择一份工作无论是在大公司还是小公司还是自己去创业，其实没有那么大的不同——只要你为你的职业生涯(career)而不是工作(job)而工作。</p>
-<h3 id="Action-Item-行动事项"><a href="#Action-Item-行动事项" class="headerlink" title="Action Item (行动事项)"></a>Action Item (行动事项)</h3><p>江湖上另外一个传言就是Amazon开会不用PPT，而是会议主持人给大家发一个6页纸的文档(6 pages)，大家猛读10分钟后开始会议内容。</p>
-<p>由于我在公司内级别不高，所以虽然以上会议形式常见但是6 pages并不算常见。但让我收益很深的是Amazon开会、讨论的另一个鲜明的特点：Action Items(行动事项)。</p>
-<p>每当开会大家激烈的讨论完一个话题之后，可能会有几个可能的解决方案，也可能会有更多的问题，这个时候会议室里总会有人说出这么一句话：“So what is the action item for this?(所以，关于这件事的行动事项是什么？)”</p>
-<p>在Amazon，无论是开完一个会后的会议记录，还是一个ticket里面的回复，里面都需要明确的列出行动事项。一个会议如果没有行动事项，就等于没开。行动事项不仅仅只是列出要做的事情，更要列出谁来做这件事，此事当前的进展，以及预期完成的时间(ETA)。不仅如此，这份行动事项会在列在一个各方都能看到的文档里实时更新。</p>
-<p>我想，行动事项的方法之所以有效，是因为它是一个非常有效的思维工具，把一个要达成的目标分离成了决策和行动两方面：这迫使我们在决策的时候就要考虑如何把大目标分成一个又一个可执行(actionable)的小目标，又在行动时让我们不再思前想后只需要按照原定计划一条一条执行下局即可。</p>
-<h3 id="吃掉大象：推动项目的能力"><a href="#吃掉大象：推动项目的能力" class="headerlink" title="吃掉大象：推动项目的能力"></a>吃掉大象：推动项目的能力</h3><p>我之前的经理经常挂在嘴边的一句话我很喜欢：</p>
-<blockquote>
-<p>How to eat an elephant? One bite at a time. :D</p>
-<p>怎么吃掉一个大象？一口一口吃咯。</p>
-</blockquote>
-<p>我之所以喜欢这句话，是因为它首先抛出了一个看似很难以完成的问题，然后又给出了既让人吃惊又合情合理的回答。这和项目管理很像：一个无论是多大的项目，只要自顶向下一层一层划分下去，总能找到着手点开始做的。</p>
-<p>具体地说，任何项目A，都可以分成小的子项目A1,A2,A3…，然后这些子项目比如A1又可以分成更小的子项目A11,A12,A13…，如此细分下去我们总可以到达一个层面：在这层的所有子项目都是可执行的(actionable)，于是我们就得到了我们的行动列表了(:D)。</p>
-<p>另一维度就是时间，在Amazon经常提到的一句话是thinking backwards(从后往前考虑)。这句话的意思是，假设我们需要2017年年末上线一个项目，那么12月需要完成什么，11月完成什么，如此这般往前倒推回去到今天。这样一来，行动事项就和项目的规划(schedule)一对一的匹配上了。</p>
-<p>Amazon公司内部由一个工程师来发起和推动一个项目的实例屡见不鲜，有一个小故事是：早期的Amazon首页上并没有商品推荐功能，有一个工程师想推动此事但是不被批准，于是他就偷偷地实现了这个功能并且上线到10%的流量中，最终推荐功能的Amazon页面购买率远高于没有推荐功能的，项目也获得批准。</p>
-<p>现阶段现实生活中的Amazon（或者其他同样档次的大公司），这样的事情几乎不可能发生。而在亚马逊内部，资深的工程师和缺乏经验的的工程师的区别就在于推动项目的能力：但是如果一个工程师提出一个项目，里面清晰地描绘了“如何吃掉一个大象”，那么他的项目获得支持以及获得成功的可能性将大大增强。</p>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>这篇文章本来在离职当天就想写，结果一拖就拖了这么久。写之前思绪万千，提起笔来挂一漏万。想想还是有些汗颜，觉得对不起起了这么大的一个题目……但想到此文只是作为自己的一个总结，也就释然了。</p>
-<p>文中没有提到一点具体的技术，原因很简单：这个时代技术已经不是秘密，只要有心学习网络上的资料太多了。一个特别推荐的资源是 Werner Vogels的博客<a href="https://www.allthingsdistributed.com" target="_blank" rel="noopener">All Things Distributed</a>，他是Amazon的CTO，里面有一系列文章叫做Back-to-Basics Weekend Reading里面包含了很多数据库以及分布式系统中的经典论文，很有意思。</p>
-<p>最后，祝福我Amazon的朋友们发展得越来越好。我虽然不再是Amazon的员工，但是还会是Amazon的客户的。 :D</p>
-<p><img src="https://farm1.staticflickr.com/771/32058797671_66e63bd957_c.jpg" alt="amazon-last-day"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1668,7 +1699,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
