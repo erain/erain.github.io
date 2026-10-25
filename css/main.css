@@ -13,7 +13,7 @@
   --table-row-odd-bg-color: #f9f9f9;
   --table-row-hover-bg-color: #f5f5f5;
   --menu-item-bg-color: #f5f5f5;
-  --theme-color: #222;
+  --theme-color: #f8f7f3;
   --btn-default-bg: #fff;
   --btn-default-color: #555;
   --btn-default-border-color: #555;
@@ -1252,7 +1252,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #0971cb;
+    background: #b1ffa4;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2909,6 +2909,7 @@ button:focus-visible {
   color: #b3b5aa;
   padding: 0 10px;
 }
+.journal-intro h1,
 .journal-intro h2 {
   font: 500 42px/1.5 var(--serif);
   letter-spacing: 0.02em;
@@ -3453,6 +3454,7 @@ button:focus-visible {
   .journal-eyebrow {
     font-size: 11px;
   }
+  .journal-intro h1,
   .journal-intro h2 {
     font-size: 29px;
     margin: 23px 0 15px;
@@ -3599,4 +3601,104 @@ button:focus-visible {
 }
 .sidebar .links-of-author-item a {
   color: var(--quiet);
+}
+/* A compact, consistent index for every year, topic and category. */
+.archive-intro {
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--rule);
+}
+.archive-intro h1,
+.archive-intro h2 {
+  margin-top: 22px;
+}
+.archive-year {
+  color: var(--accent);
+  font: 400 25px/1.6 var(--serif);
+  margin: 34px 0 10px;
+}
+.archive-entry {
+  display: grid;
+  grid-template-columns: 94px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.archive-entry time {
+  font: 11px/1.8 var(--sans);
+  font-variant-numeric: tabular-nums;
+  color: var(--quiet);
+}
+.archive-entry .post-title {
+  margin: 0;
+  font: 400 19px/1.8 var(--serif);
+  text-wrap: pretty;
+}
+.archive-entry a {
+  border: 0;
+}
+.journal-tag-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 30px;
+  margin-top: 16px;
+}
+.journal-tag {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 30px 0;
+  gap: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.journal-tag-name {
+  font: 500 32px/1.6 var(--serif);
+}
+.journal-tag-meta {
+  font: 11px/1.8 var(--sans);
+  color: var(--quiet);
+}
+.journal-tag-meta span {
+  margin-left: 8px;
+  color: var(--accent);
+}
+.journal-tag:hover .journal-tag-name {
+  color: var(--accent);
+}
+@media (max-width: 600px) {
+  .journal-intro h1 {
+    font-size: 29px;
+    margin: 23px 0 15px;
+    letter-spacing: 0;
+  }
+  .archive-intro {
+    padding-bottom: 25px;
+  }
+  .archive-year {
+    font-size: 23px;
+    margin-top: 28px;
+  }
+  .archive-entry {
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px 0;
+  }
+  .archive-entry time {
+    font-size: 10px;
+  }
+  .archive-entry .post-title {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+  .journal-tag-grid {
+    gap: 0 22px;
+  }
+  .journal-tag {
+    flex-direction: column;
+    gap: 5px;
+    padding: 24px 0;
+  }
+  .journal-tag-name {
+    font-size: 28px;
+  }
 }
