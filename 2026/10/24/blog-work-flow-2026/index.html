@@ -10,15 +10,14 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/main.css?v=780108539c30">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
 
 <link rel="stylesheet" href="/lib/fontawesome-7.3.1/css/all.min.css">
-  <link rel="stylesheet" href="/lib/animate-3.1.1/animate.min.css">
   <link rel="stylesheet" href="/lib/fancybox-6.1.14/fancybox.css">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.yiyu.me","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-dark","dark":"atom-one-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.yiyu.me","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"github","dark":"github"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js?v=a65fc965d74f" defer></script>
 
     <meta name="description" content="2018年写过一篇Hexo博客Workflow，记录了怎么把这个博客在本地架起来，再把文章发布出去。 八年过去，博客还是Hexo，主题还是自己改过的NexT。写博客之前要回忆的命令，却还是有点多：源码在一个repo，主题在另一个repo，要同步submodule，要装依赖，最后还要记得部署和提交源码。这些事单独看都不复杂，但隔很久才写一篇的时候，每一步都得重新想一遍。 所以这次把workflow整">
 <meta property="og:type" content="article">
@@ -28,7 +27,7 @@
 <meta property="og:description" content="2018年写过一篇Hexo博客Workflow，记录了怎么把这个博客在本地架起来，再把文章发布出去。 八年过去，博客还是Hexo，主题还是自己改过的NexT。写博客之前要回忆的命令，却还是有点多：源码在一个repo，主题在另一个repo，要同步submodule，要装依赖，最后还要记得部署和提交源码。这些事单独看都不复杂，但隔很久才写一篇的时候，每一步都得重新想一遍。 所以这次把workflow整">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-10-24T08:00:00.000Z">
-<meta property="article:modified_time" content="2026-10-24T12:54:42.812Z">
+<meta property="article:modified_time" content="2026-10-25T00:55:37.968Z">
 <meta property="article:author" content="erain">
 <meta property="article:tag" content="犬">
 <meta name="twitter:card" content="summary">
@@ -52,13 +51,13 @@
 
   
   <script src="/lib/fancybox-6.1.14/fancybox.umd.js" defer></script>
-<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+<script src="/js/utils.js?v=5393bac179fc" defer></script><script src="/js/sidebar.js?v=3b86726489e2" defer></script><script src="/js/next-boot.js?v=9c9dac5016b3" defer></script>
 
   
 
 
 
-  <script src="/js/third-party/fancybox.js" defer></script>
+  <script src="/js/third-party/fancybox.js?v=b386dcb99f1c" defer></script>
 
 
 
@@ -67,13 +66,16 @@
 
 
 
+<link rel="preload" href="/fonts/reading-serif.woff2?v=42723357d04f" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-latin.woff2?v=3100e775e861" as="font" type="font/woff2" crossorigin>
+<script src="/js/editorial.js?v=dd7c4076ddfb" defer></script>
 
   <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
+    <link rel="stylesheet" href="/css/noscript.css?v=4e519d870cc0">
   </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="headband"></div>
 
   <main class="main">
@@ -137,7 +139,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="erain"
-      src="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+      src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">erain</p>
   <div class="site-description" itemprop="description">Skadoosh!</div>
 </div>
@@ -195,7 +197,7 @@
     <link itemprop="mainEntityOfPage" href="https://blog.yiyu.me/2026/10/24/blog-work-flow-2026/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://c3.staticflickr.com/1/324/31155363554_68e1071037.jpg">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="erain">
     </span>
 
@@ -277,7 +279,7 @@
 <td>GitHub Actions</td>
 </tr>
 </tbody></table>
-<p>主题已升级到NexT 8，通过npm安装，具体版本由<code>package.json</code>和<code>package-lock.json</code>锁定。自己的主题设置放在源码仓库的<code>_config.next.yml</code>里面，继续使用Pisces双栏风格。要改配置，就和改文章一样，在这个仓库修改、提交。原来单独的主题仓库和submodule都不再是日常流程的一部分。</p>
+<p>主题已升级到NexT 8，通过npm安装，具体版本由<code>package.json</code>和<code>package-lock.json</code>锁定。自己的主题设置放在源码仓库的<code>_config.next.yml</code>里面，在Pisces双栏布局上做了适合中文长文的排版，首页用摘要展示文章。站点的样式在<code>source/_data/styles.styl</code>，首页模板在<code>layout/index.njk</code>。要改配置，就和改文章一样，在这个仓库修改、提交。原来单独的主题仓库和submodule都不再是日常流程的一部分。</p>
 <p>网站继续由原来的GitHub Pages托管，域名还是<code>blog.yiyu.me</code>。这次主要是把手工操作自动化，没有换博客引擎，也没有换托管方式。</p>
 <p>整个流程可以画成这样：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">编辑Markdown、提交到源码仓库的master</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Actions：build</span><br><span class="line">  Node.js 24 + npm ci</span><br><span class="line">  Hexo + NexT -&gt; public/</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">上传构建产物blog-public</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Actions：deploy</span><br><span class="line">  下载同一份产物</span><br><span class="line">  同步到erain.github.io的master</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">GitHub Pages构建与部署</span><br><span class="line">                 |</span><br><span class="line">                 v</span><br><span class="line">https://blog.yiyu.me</span><br></pre></td></tr></table></figure>
